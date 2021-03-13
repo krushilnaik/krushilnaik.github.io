@@ -1,14 +1,28 @@
-html {
-	background-image: url(https://121clicks.com/wp-content/uploads/2019/07/landscape_photography_course_ian_plant_01.jpg);
-	background-color: rgba(0, 0, 255, .6);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-blend-mode: lighten;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
 }
 
 body {
 	margin: 0%;
 	padding: 0%;
 	width: 100vw;
+	min-height: 100vh;
 	max-width: 100%;
+	transition: .3s;
+
+	display: flex;
+	flex-direction: column;
 }
+	body.light {
+		background: url(../images/background.jpg) center / cover,
+			linear-gradient(#ff000050, #ffff0050);
+		background-blend-mode: screen;
+	}
+	body.dark {
+		background: url(../images/background.jpg) center / cover,
+			linear-gradient(#64000080, #66660080);
+		background-blend-mode: color-burn;
+	}

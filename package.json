@@ -1,0 +1,23 @@
+{
+	"name": "krushilnaik.github.io",
+	"version": "1.0.0",
+	"description": "All my projects and experiences in one place.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/krushilnaik/krushilnaik.github.io.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/krushilnaik/krushilnaik.github.io/issues"
+	},
+	"homepage": "https://github.com/krushilnaik/krushilnaik.github.io#readme",
+	"dependencies": {
+		"aos": "^2.3.4"
+	}
+}

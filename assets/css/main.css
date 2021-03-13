@@ -1,0 +1,14 @@
+html {
+	background-image: url(https://121clicks.com/wp-content/uploads/2019/07/landscape_photography_course_ian_plant_01.jpg);
+	background-color: rgba(0, 0, 255, .6);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-blend-mode: lighten;
+}
+
+body {
+	margin: 0%;
+	padding: 0%;
+	width: 100vw;
+	max-width: 100%;
+}

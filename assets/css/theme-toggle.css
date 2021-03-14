@@ -36,6 +36,9 @@
 	margin-left: 0;
 	transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+	#theme-switcher:not(:checked) + #toggle .modes * {
+		color: #353535;
+	}
 
 #theme-switcher:checked + #toggle #toggle-ui {
 	margin-left: 50%;
@@ -46,6 +49,6 @@
 #theme-switcher:checked + #toggle .modes {
 	color: #f0f0f0;
 }
-	#theme-switcher:checked + #toggle .modes .light {
+	#theme-switcher + #toggle .modes .light {
 		color: #353535;
 	}

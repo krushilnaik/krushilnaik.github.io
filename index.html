@@ -15,13 +15,20 @@
 		<link rel="stylesheet" href="assets/css/theme-toggle.css" />
 	</head>
 
-	<body class="light">
-		<!-- TODO: Navigation -->
+	<body class="dark">
+		<!-- TODO: Links -->
+		<nav>
+			<div id="links">
+				<a id="github" href="https://github.com/krushilnaik" data-aos="fade-right" data-aos-easing="ease" data-aos-delay="1000">GitHub</a>
+				<a id="linkedin" href="https://www.linkedin.com/in/krushil-naik-0a42191ba/" data-aos="fade-right" data-aos-easing="ease" data-aos-delay="800">LinkedIn</a>
+				<a id="email" href="mailto:krushilnaik96@gmail.com" data-aos="fade-right" data-aos-easing="ease" data-aos-delay="600">Email</a>
+			</div>
+		</nav>
 
 		<main>
 			<!-- TODO: Light/Dark Toggle -->
 
-			<input type="checkbox" name="theme-switcher" id="theme-switcher" checked />
+			<input type="checkbox" name="theme-switcher" id="theme-switcher" hidden checked />
 			<label for="theme-switcher" id="toggle">
 				<div id="toggle-ui"></div>
 				<div class="modes">
@@ -42,5 +49,9 @@
 
 		<!-- Internal JavaScript -->
 		<script src="assets/js/script.js"></script>
+
+		<script>
+			AOS.init( { duration: 1000 } );
+		</script>
 	</body>
 </html>

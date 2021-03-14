@@ -46,6 +46,11 @@ nav {
 	grid-template-columns: 15px auto;
 	column-gap: 5px;
 }
+	#links > div:hover * {
+		color: coral;
+		cursor: pointer;
+		transition: color .45s;
+	}
 	#links > div i {
 		align-self: center;
 	}
@@ -53,11 +58,7 @@ nav {
 a {
 	font-size: large;
 	text-decoration: none;
-	transition: color .45s;
 }
-	a:hover {
-		color: coral;
-	}
 
 #about-me {
 	margin: 35px auto;

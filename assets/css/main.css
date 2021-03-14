@@ -17,14 +17,14 @@ body {
 	display: flex;
 	flex-direction: column;
 }
-body.light {
-	background: url(../images/background.jpg) center / cover, linear-gradient(#ff000050, #ffff0050);
-	background-blend-mode: screen;
-}
-body.dark {
-	background: url(../images/background.jpg) center / cover, linear-gradient(#64000080, #66660080);
-	background-blend-mode: color-burn;
-}
+	body.light {
+		background: url(../images/background.jpg) center / cover, linear-gradient(#ff000050, #ffff0050);
+		background-blend-mode: screen;
+	}
+	body.dark {
+		background: url(../images/background.jpg) center / cover, linear-gradient(#64000080, #66660080);
+		background-blend-mode: color-burn;
+	}
 
 nav {
 	height: 3em;
@@ -33,22 +33,31 @@ nav {
 	max-width: 100%;
 	padding: 0.8%;
 }
-nav #links {
+	nav #links {
+		display: grid;
+		grid-template-columns: repeat(3, auto);
+		column-gap: 5%;
+		justify-self: end;
+		padding-right: 0.8%;
+	}
+
+#links > div {
 	display: grid;
-	grid-template-columns: repeat(3, auto);
-	column-gap: 5%;
-	justify-self: end;
-	padding-right: 0.8%;
+	grid-template-columns: 15px auto;
+	column-gap: 5px;
 }
+	#links > div i {
+		align-self: center;
+	}
 
 a {
 	font-size: large;
 	text-decoration: none;
 	transition: color .45s;
 }
-a:hover {
-	color: coral;
-}
+	a:hover {
+		color: coral;
+	}
 
 #about-me {
 	margin: 35px auto;

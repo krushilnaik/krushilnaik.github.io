@@ -44,7 +44,7 @@ nav #links {
 a {
 	font-size: large;
 	text-decoration: none;
-	transition: color 0.25s;
+	transition: color .45s;
 }
 a:hover {
 	color: coral;

@@ -33,7 +33,6 @@ nav {
 	padding: 0.8%;
 }
 	nav #links {
-		background-color: #ff3960;
 		display: grid;
 		grid-template-columns: repeat(5, auto);
 		justify-self: end;

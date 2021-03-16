@@ -29,6 +29,17 @@ class NavBar extends React.Component {
 		 */
 
 		/**
+		 * Example div block
+		 * 
+		 * <div id="github" data-aos="fade-right" data-aos-delay="1000">
+		 * 	<div class="hvr-underline-from-center">
+		 * 		<i class="fab fa-github-square"></i>
+		 * 		<a href="https://github.com/krushilnaik">GitHub</a>
+		 * 	</div>
+		 * </div>
+		 */
+
+		/**
 		 * @type {LinkContent[]}
 		 */
 		const linkContent = [

@@ -37,6 +37,9 @@ nav {
 		grid-template-columns: repeat(5, auto);
 		justify-self: end;
 	}
+		nav #links div:not(:last-child) {
+			margin-right: 10%;
+		}
 
 #links > div:hover * {
 	color: coral;

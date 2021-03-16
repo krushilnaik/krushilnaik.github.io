@@ -1,8 +1,3 @@
-const React = require("react");
-
-// @ts-ignore
-const jsx = require("react/jsx-runtime");
-
 {/* <nav>
 	<div id="links">
 		<div id="github" data-aos="fade-right" data-aos-delay="1000">
@@ -63,16 +58,18 @@ class NavBar extends React.Component {
 				link: <a href="mailto:krushilnaik96@gmail.com">Gmail</a>,
 				icon: "fas fa-envelope-square"
 			}
-		]
+		];
 
 		return (
 			<React.Fragment>
 				{
 					linkContent.map(
-						(linkEl, i) => <NavBarLink delay={600 + (linkContent.length - i)*200} id={linkEl.id} icon={linkEl.icon}></NavBarLink>
+						(linkEl, i) => <NavBarLink delay={600 + (linkContent.length - i)*200} id={linkEl.id} icon={linkEl.icon} link={linkEl.link}></NavBarLink>
 					)
 				}
 			</React.Fragment>
 		); 
 	}
 }
+
+ReactDOM.render(<NavBar />, document.getElementById("links"));

@@ -22,28 +22,7 @@
 	<body class="dark">
 		<!-- TODO: Links -->
 		<nav>
-			<div id="links">
-				<div id="github" data-aos="fade-right" data-aos-delay="1000">
-					<div class="hvr-underline-from-center">
-						<i class="fab fa-github-square"></i>
-						<a href="https://github.com/krushilnaik">GitHub</a>
-					</div>
-				</div>
-				<div style="width: 15px;"></div>
-				<div id="linkedin" data-aos="fade-right" data-aos-delay="800">
-					<div class="hvr-underline-from-center">
-						<i class="fab fa-linkedin"></i>
-						<a href="https://www.linkedin.com/in/krushil-naik-0a42191ba/">LinkedIn</a>
-					</div>
-				</div>
-				<div style="width: 15px;"></div>
-				<div id="email" data-aos="fade-right" data-aos-delay="600">
-					<div class="hvr-underline-from-center">
-						<i class="fas fa-envelope-square"></i>
-						<a href="mailto:krushilnaik96@gmail.com">Gmail</a>
-					</div>
-				</div>
-			</div>
+			<div id="links"></div>
 		</nav>
 
 		<main>
@@ -79,9 +58,13 @@
 
 		<!-- External JavaScript -->
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+		<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+		<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
 		<!-- Internal JavaScript -->
 		<script src="assets/js/script.js"></script>
+		<script type="text/babel" src="assets/js/links.jsx"></script>
 
 		<script>
 			AOS.init({

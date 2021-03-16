@@ -1,31 +1,10 @@
-{/* <nav>
-	<div id="links">
-		<div id="github" data-aos="fade-right" data-aos-delay="1000">
-			<div class="hvr-underline-from-center">
-				<i class="fab fa-github-square"></i>
-				<a href="https://github.com/krushilnaik">GitHub</a>
-			</div>
-		</div>
-		<div style="width: 15px;"></div>
-		<div id="linkedin" data-aos="fade-right" data-aos-delay="800">
-			<div class="hvr-underline-from-center">
-				<i class="fab fa-linkedin"></i>
-				<a href="https://www.linkedin.com/in/krushil-naik-0a42191ba/">LinkedIn</a>
-			</div>
-		</div>
-		<div style="width: 15px;"></div>
-		<div id="email" data-aos="fade-right" data-aos-delay="600">
-			<div class="hvr-underline-from-center">
-				<i class="fas fa-envelope-square"></i>
-				<a href="mailto:krushilnaik96@gmail.com">Gmail</a>
-			</div>
-		</div>
-	</div>
-</nav> */}
-
 class NavBarLink extends React.Component {
+	/**
+	 * @param {{id: string, delay: number, icon: string, link: JSX.Element}} props 
+	 */
 	constructor(props) {
 		super(props);
+		this.props = {...props};
 	}
 
 	render() {
@@ -42,6 +21,16 @@ class NavBarLink extends React.Component {
 
 class NavBar extends React.Component {
 	render() {
+		/**
+		 * @typedef {object} LinkContent
+		 * @property {string} id - id to be assigned to div
+		 * @property {JSX.Element} link - anchor tag with href
+		 * @property {string} icon - FontAwesome class of i tag
+		 */
+
+		/**
+		 * @type {LinkContent[]}
+		 */
 		const linkContent = [
 			{
 				id: "github",

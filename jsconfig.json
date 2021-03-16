@@ -5,7 +5,8 @@
 		"noUnusedLocals": true,
 		"checkJs": true,
 		"target": "es2018",
-		"moduleResolution": "node"
+		"moduleResolution": "node",
+		"jsx": "react-jsx"
 	},
 	"exclude": ["./node_modules"]
 }

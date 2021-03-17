@@ -24,14 +24,6 @@ body {
 	display: flex;
 	flex-direction: column;
 }
-	body.light #background {
-		background: linear-gradient(#ff000050, #ffff0050);
-		/* background-blend-mode: screen; */
-	}
-	body.dark #background {
-		background: linear-gradient(#640000c0, #666600c0);
-		/* background-blend-mode: color-burn; */
-	}
 
 nav {
 	height: 3em;

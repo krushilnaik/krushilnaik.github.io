@@ -1,0 +1,6 @@
+svg {
+	z-index: -1;
+	position: fixed;
+	user-select: none;
+	height: 100%;
+}

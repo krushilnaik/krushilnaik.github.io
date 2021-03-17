@@ -18,12 +18,12 @@ body {
 	flex-direction: column;
 }
 	body.light {
-		background: url(../images/background.jpg) center / cover, linear-gradient(#ff000050, #ffff0050);
-		background-blend-mode: screen;
+		background: linear-gradient(#ff000050, #ffff0050);
+		/* background-blend-mode: screen; */
 	}
 	body.dark {
-		background: url(../images/background.jpg) center / cover, linear-gradient(#64000080, #66660080);
-		background-blend-mode: color-burn;
+		background: linear-gradient(#640000c0, #666600c0);
+		/* background-blend-mode: color-burn; */
 	}
 
 nav {

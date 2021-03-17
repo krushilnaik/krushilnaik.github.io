@@ -37,17 +37,17 @@ class NavBar extends React.Component {
 		const linkContent = [
 			{
 				id: "github",
-				link: <a href="https://github.com/krushilnaik">GitHub</a>,
+				link: <a target="_blank" href="https://github.com/krushilnaik">GitHub</a>,
 				icon: "fab fa-github-square"
 			},
 			{
 				id: "linkedin",
-				link: <a href="https://www.linkedin.com/in/krushil-naik-0a42191ba/">LinkedIn</a>,
+				link: <a target="_blank" href="https://www.linkedin.com/in/krushil-naik-0a42191ba/">LinkedIn</a>,
 				icon: "fab fa-linkedin"
 			},
 			{
 				id: "gmail",
-				link: <a href="mailto:krushilnaik96@gmail.com">Gmail</a>,
+				link: <a target="_blank" href="mailto:krushilnaik96@gmail.com">Gmail</a>,
 				icon: "fas fa-envelope-square"
 			}
 		];

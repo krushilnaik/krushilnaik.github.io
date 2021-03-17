@@ -1,3 +1,15 @@
 #skill-grid {
-	background-color: aquamarine;
+	background-color: rgb(85, 173, 144);
+	margin: auto;
+	margin-bottom: 5%;
+	width: 60%;
+
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+}
+
+li {
+	list-style-position: inside;
+	padding: 0.8%;
 }

@@ -1,3 +1,22 @@
+/**
+ * @type {React.CSSProperties}
+ */
+const skillStyleCommon = {
+	width: "100%",
+	height: "100%",
+	padding: "1%",
+
+	backgroundRepeat: "no-repeat",
+	backgroundSize: "80%",
+	backgroundPosition: "center",
+
+	justifySelf: "center",
+	alignSelf: "center",
+
+	position: "relative",
+	transition: "all .2s"
+};
+
 class SubSkillCard extends React.Component {
 	constructor(props) {
 		super(props);
@@ -14,8 +33,17 @@ class SubSkillCard extends React.Component {
 	}
 
 	render() {
+		/**
+		 * @type {React.CSSProperties}
+		 */
+		const style = {
+			...skillStyleCommon,
+			backgroundImage: `url(assets/images/grid-backgrounds/${this.skillName.replace("Vanilla ", "").toLowerCase()}.png)`,
+			backgroundColor: "darkcyan"
+		};
+
 		return (
-			<div className="sub-skill-card" id={this.skillName.toLowerCase().replace(" ", "-")} data-descr={this.skillName}>
+			<div style={style} className="sub-skill-card" id={this.skillName.toLowerCase().replace(" ", "-")} data-descr={this.skillName}>
 				<ul>
 					{
 						this.repos.map(
@@ -30,8 +58,18 @@ class SubSkillCard extends React.Component {
 
 class SkillCard extends React.Component {
 	render() {
+
+		/**
+		 * @type {React.CSSProperties}
+		 */
+		const style = {
+			...skillStyleCommon,
+			backgroundImage: `url(assets/images/grid-backgrounds/${this.props.cardTitle.replace("Vanilla ", "").toLowerCase()}.png)`,
+			backgroundColor: "indianred"
+		};
+
 		return (
-			<div id={this.props.cardTitle.replace(" ", "-").toLowerCase()} data-descr={this.props.cardTitle}>
+			<div style={style} id={this.props.cardTitle.replace(" ", "-").toLowerCase()} data-descr={this.props.cardTitle} className="skill-card">
 				<div className="sub-skill-grid">
 					{this.props.subSkills.map(skill => <SubSkillCard data={skill}/>)}
 				</div>

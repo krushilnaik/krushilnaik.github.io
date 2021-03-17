@@ -47,7 +47,7 @@ class SubSkillCard extends React.Component {
 				<ul>
 					{
 						this.repos.map(
-							repo => <li><a href={repo.startsWith("http") ? repo : `https://krushilnaik.github.io/${repo}`}>{repo.replace(/-/g, " ")}</a></li>
+							repo => <li key={repo}><a href={repo.startsWith("http") ? repo : `https://krushilnaik.github.io/${repo}`}>{repo.replace(/-/g, " ")}</a></li>
 						)
 					}
 				</ul>
@@ -84,7 +84,7 @@ class SkillCard extends React.Component {
 		return (
 			<div style={this.style} id={this.props.cardTitle.replace(" ", "-").toLowerCase()} data-descr={this.props.cardTitle} className="skill-card">
 				<div className="sub-skill-grid" style={this.subStyle}>
-					{this.props.subSkills.map(skill => <SubSkillCard data={skill}/>)}
+					{this.props.subSkills.map(skill => <SubSkillCard key={skill.skill} data={skill}/>)}
 				</div>
 			</div>
 		);
@@ -116,7 +116,7 @@ class SkillGrid extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
-				{this.skills.map(skill => <SkillCard cardTitle={skill.skill} subSkills={skill.sub_skills}/>)}
+				{this.skills.map(skill => <SkillCard key={skill.skill} cardTitle={skill.skill} subSkills={skill.sub_skills}/>)}
 			</React.Fragment>
 		);
 	}

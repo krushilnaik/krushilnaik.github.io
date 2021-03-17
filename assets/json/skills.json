@@ -1,18 +1,24 @@
 [
 	{
 		"skill": "Python",
-		"sub-skills": [
+		"sub_skills": [
 			{
-				"skill": "Django"
+				"skill": "Django",
+				"repos": [
+					"Commerce",
+					"Search",
+					"Wiki"
+				]
 			},
 			{
-				"skill": "Scrapy"
+				"skill": "Scrapy",
+				"repos": []
 			}
 		]
 	},
 	{
 		"skill": "JavaScript",
-		"sub-skills": [
+		"sub_skills": [
 			{
 				"skill": "Vanilla JavaScript",
 				"repos": [
@@ -28,7 +34,8 @@
 				]
 			},
 			{
-				"skill": "Angular"
+				"skill": "Angular",
+				"repos": []
 			},
 			{
 				"skill": "Express",

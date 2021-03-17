@@ -117,3 +117,35 @@ a {
 	width: 200px;
 	clip-path: circle(50% at center);
 }
+
+form {
+	position: fixed;
+	bottom: 1vmin;
+	right: 1vmin;
+	display: grid;
+	grid-template-columns: 1fr;
+	background-color: #ff3960;
+	padding: 10px;
+	border-radius: 10px;
+}
+	form * {
+		outline: none;
+		border: none;
+		border-radius: 10px;
+		margin: 2%;
+		font-size: inherit;
+		padding: 1%;
+		line-height: 1.3em;
+		font-size: 20px;
+	}
+	form textarea {
+		resize: none;
+	}
+	form button {
+		font-size: 18px;
+		width: 50%;
+		justify-self: center;
+	}
+		form button:hover {
+			cursor: pointer;
+		}

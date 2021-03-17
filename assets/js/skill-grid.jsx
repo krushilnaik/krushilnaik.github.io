@@ -58,7 +58,6 @@ class SubSkillCard extends React.Component {
 
 class SkillCard extends React.Component {
 	render() {
-
 		/**
 		 * @type {React.CSSProperties}
 		 */
@@ -68,9 +67,15 @@ class SkillCard extends React.Component {
 			backgroundColor: "indianred"
 		};
 
+		const subStyle = {
+			display: "grid",
+			gridTemplateColumns: "1fr 1fr",
+			gridTemplateRows: "1fr 1fr"
+		};
+
 		return (
 			<div style={style} id={this.props.cardTitle.replace(" ", "-").toLowerCase()} data-descr={this.props.cardTitle} className="skill-card">
-				<div className="sub-skill-grid">
+				<div className="sub-skill-grid" style={subStyle}>
 					{this.props.subSkills.map(skill => <SubSkillCard data={skill}/>)}
 				</div>
 			</div>

@@ -1,0 +1,48 @@
+[
+	{
+		"skill": "Python",
+		"sub-skills": [
+			{
+				"skill": "Django"
+			},
+			{
+				"skill": "Scrapy"
+			}
+		]
+	},
+	{
+		"skill": "JavaScript",
+		"sub-skills": [
+			{
+				"skill": "Vanilla JavaScript",
+				"repos": [
+					"Weather-Dashboard",
+					"Quiz-Me",
+					"Day-Calendar"
+				]
+			},
+			{
+				"skill": "React",
+				"repos": [
+					"EcoDesign"
+				]
+			},
+			{
+				"skill": "Angular"
+			},
+			{
+				"skill": "Express",
+				"repos": [
+					"Note-Taker"
+				]
+			},
+			{
+				"skill": "Node",
+				"repos": [
+					"README-Generator",
+					"Team-Profile-Generator"
+				]
+			}
+		]
+	}
+]

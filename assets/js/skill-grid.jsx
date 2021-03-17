@@ -42,7 +42,6 @@ class SubSkillCard extends React.Component {
 	}
 
 	render() {
-
 		return (
 			<div style={this.style} className="sub-skill-card" id={this.skillName.toLowerCase().replace(" ", "-")} data-descr={this.skillName}>
 				<ul>

@@ -1,12 +1,4 @@
 class NavBarLink extends React.Component {
-	/**
-	 * @param {{id: string, delay: number, icon: string, link: JSX.Element}} props 
-	 */
-	constructor(props) {
-		super(props);
-		this.props = {...props};
-	}
-
 	render() {
 		return (
 			<div id={this.props.id} data-aos="fade-right" data-aos-delay={this.props.delay}>

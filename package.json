@@ -23,12 +23,8 @@
 		"babel-loader": "^8.2.2",
 		"babel-preset-env": "^1.7.0",
 		"babel-preset-react": "^6.24.1",
-		"html-webpack-plugin": "^5.3.1",
-		"jsx-runtime": "^1.2.0",
 		"react": "^17.0.1",
 		"react-dom": "^17.0.1"
 	},
-	"devDependencies": {
-		"react-jsx": "^1.0.0"
-	}
+	"devDependencies": {}
 }

@@ -56,7 +56,7 @@ class NavBar extends React.Component {
 			<React.Fragment>
 				{
 					linkContent.map(
-						(linkEl, i) => <NavBarLink delay={400 + (linkContent.length - 1 - i)*200} id={linkEl.id} icon={linkEl.icon} link={linkEl.link}></NavBarLink>
+						(linkEl, i) => <NavBarLink delay={400 + (linkContent.length - 1 - i)*200} id={linkEl.id} key={linkEl.id} icon={linkEl.icon} link={linkEl.link}></NavBarLink>
 					)
 				}
 			</React.Fragment>

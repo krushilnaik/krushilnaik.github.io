@@ -88,6 +88,60 @@ a {
 	right: 0;
 }
 
+.hvr-wrap-from-left {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	position: relative;
+	overflow: hidden;
+}
+
+.hvr-wrap-from-left:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	right: 100%;
+	bottom: 0;
+	background: honeydew;
+	height: 2px;
+	-webkit-transition-property: right;
+	transition-property: right;
+	-webkit-transition-duration: 0.15s;
+	transition-duration: 0.15s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+	transition-delay: 0.15s;
+}
+
+.hvr-wrap-from-left:hover:before, .hvr-wrap-from-left:focus:before, .hvr-wrap-from-left:active:before {
+	right: 0;
+}
+
+.hvr-wrap-from-left::after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	right: 100%;
+	bottom: 100%;
+	background: honeydew;
+	height: 100%;
+	width: 2px;
+	-webkit-transition-property: bottom;
+	transition-property: bottom;
+	-webkit-transition-duration: 0.15s;
+	transition-duration: 0.15s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+}
+
+.hvr-wrap-from-left:hover::after, .hvr-wrap-from-left:focus::after, .hvr-wrap-from-left:active::after {
+	bottom: 0;
+}
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 #about-me {
@@ -128,16 +182,26 @@ form {
 	padding: 10px;
 	border-radius: 10px;
 }
-	form * {
-		outline: none;
-		border: none;
-		border-radius: 10px;
+	form div {
 		margin: 2%;
-		font-size: inherit;
-		padding: 1%;
-		line-height: 1.3em;
-		font-size: 20px;
+		border-radius: 10px;
 	}
+		form div *, form button {
+			border-radius: inherit;
+			padding: 1%;
+			border: none;
+			outline: none;
+			font-size: inherit;
+			line-height: 1.3em;
+			font-size: 20px;
+			background-color: #cccccc42;
+			color: honeydew;
+			transition: .2s;
+			width: 100%;
+		}
+		form div *:hover {
+			background-color: #ffffff2f;
+		}
 	form textarea {
 		resize: none;
 	}
@@ -149,3 +213,7 @@ form {
 		form button:hover {
 			cursor: pointer;
 		}
+
+::placeholder {
+	color: honeydew;
+}

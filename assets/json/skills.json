@@ -30,7 +30,7 @@
 			{
 				"skill": "React",
 				"repos": [
-					"EcoDesign"
+					"https://krushilnaik.github.io"
 				]
 			},
 			{
@@ -48,6 +48,12 @@
 				"repos": [
 					"README-Generator",
 					"Team-Profile-Generator"
+				]
+			},
+			{
+				"skill": "MERN Stack",
+				"repos": [
+					"https://ecodesign.herokuapp.com"
 				]
 			}
 		]

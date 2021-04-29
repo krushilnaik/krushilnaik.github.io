@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"target": "es2019",
+		"allowUnreachableCode": false,
+		"allowUnusedLabels": false,
+		"checkJs": true,
+		"jsx": "react",
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"removeComments": true,
+		"resolveJsonModule": true,
+		"moduleResolution": "node",
+		"noImplicitAny": true,
+		"module": "commonJS"
+	}
+}

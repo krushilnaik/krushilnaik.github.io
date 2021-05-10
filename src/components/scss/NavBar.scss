@@ -1,0 +1,36 @@
+nav {
+	display: grid;
+	justify-content: flex-end;
+
+	ul {
+		display: grid;
+		gap: 15px;
+		position: relative;
+
+		.navigator {
+			font-size: 18px;
+			position: absolute;
+			transition: 200ms;
+			height: 3px;
+			background-color: #ff2853;
+			bottom: -3px;
+			left: 0;
+		}
+
+		li {
+			list-style-position: inside;
+			list-style-type: none;
+
+			a {
+				font-size: 18px;
+				color: honeydew;
+				text-decoration: none;
+				transition: 200ms;
+
+				&:hover {
+					color: crimson;
+				}
+			}
+		}
+	}
+}

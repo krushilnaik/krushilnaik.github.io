@@ -21,7 +21,7 @@ function AboutMe() {
 					<p>{calculateAge('09/07/1996')} years old</p>
 				</aside>
 
-				<article>This is where info about me will go. Hobbies, all that good stuff.</article>
+				<article>This is where info about me will go. Hobbies, interests, all that good stuff.</article>
 			</div>
 		</section>
 	);

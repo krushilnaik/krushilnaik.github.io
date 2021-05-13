@@ -1,11 +1,57 @@
 #about-me {
 	background-color: rgba($color: cadetblue, $alpha: 0.1);
 
-	// probably not gonna keep these but you never know
 	display: grid;
+	padding: 10%;
+
 	align-items: center;
-	justify-content: center;
-	color: honeydew;
-	font-weight: bold;
-	font-size: 75px;
+	justify-items: center;
+
+	.content {
+		display: grid;
+		grid-template-columns: 1fr 3fr;
+		gap: 15px;
+		background-color: rgba($color: crimson, $alpha: 0.3);
+
+		aside {
+			img {
+				height: 300px;
+				width: 300px;
+
+				border-radius: 50%;
+				box-shadow: 1px 1px 5px black;
+			}
+
+			p {
+				font-size: 36px;
+				color: lightblue;
+			}
+
+			.name {
+				padding-top: 10px;
+				padding-left: 35px;
+
+				.note {
+					font-size: 24px;
+					position: relative;
+					padding-left: 45px;
+
+					&::before {
+						content: '';
+						position: absolute;
+						height: 15px;
+						width: 17px;
+						left: 15px;
+						border-bottom: solid 2px lightcyan;
+						border-left: solid 2px lightcyan;
+					}
+				}
+			}
+		}
+
+		article {
+			color: lightblue;
+			font-size: 35px;
+		}
+	}
 }

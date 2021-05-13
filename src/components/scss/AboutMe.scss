@@ -1,3 +1,11 @@
 #about-me {
 	background-color: rgba($color: cadetblue, $alpha: 0.1);
+
+	// probably not gonna keep these but you never know
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	color: honeydew;
+	font-weight: bold;
+	font-size: 75px;
 }

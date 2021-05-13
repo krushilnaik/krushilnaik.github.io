@@ -7,7 +7,6 @@
 
 body {
 	width: 100vw;
-	height: 100vh;
 	max-width: 100%;
 }
 
@@ -18,7 +17,6 @@ body {
 	background: #0f2027;
 	background: linear-gradient(-45deg, #2c5364, #203a43, #0f2027);
 	/* background-size: 200% 200%; */
-
 	/* animation: backgroundAnimation 8s infinite; */
 }
 
@@ -32,4 +30,20 @@ body {
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+/* Customize scroll bar */
+/* won't work on Firefox */
+::-webkit-scrollbar {
+	display: none;
+	width: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px rgb(82, 136, 138);
+	background-color: #0f2027;
+}
+
+::-webkit-scrollbar-thumb {
+	background: cadetblue;
 }

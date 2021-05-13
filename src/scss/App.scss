@@ -4,5 +4,10 @@ main {
 	padding: 15px;
 
 	display: grid;
-	grid-template-rows: auto 1fr;
+	grid-auto-rows: calc(100vh - 30px);
+	row-gap: 15px;
+
+	> section {
+		padding: 15px;
+	}
 }

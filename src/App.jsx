@@ -1,4 +1,3 @@
-// import anime from 'animejs';
 import React from 'react';
 import AboutMe from './components/AboutMe';
 import ContactForm from './components/ContactForm';
@@ -10,13 +9,15 @@ import './scss/App.scss';
 
 function App() {
 	return (
-		<main>
+		<React.Fragment>
 			<NavBar />
-			<Intro />
-			{/* <AboutMe /> */}
-			{/* <SkillSet /> */}
-			{/* <ContactForm /> */}
-		</main>
+			<main>
+				<Intro />
+				<AboutMe />
+				<SkillSet />
+				<ContactForm />
+			</main>
+		</React.Fragment>
 	);
 }
 

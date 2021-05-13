@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Footer from './Footer';
 
 import './scss/ContactForm.scss';
 
@@ -45,6 +46,8 @@ function ContactForm() {
 				</div>
 				<button type='submit'>Send carrier pigeon</button>
 			</form>
+
+			<Footer />
 		</section>
 	);
 }

@@ -1,6 +1,7 @@
 #contact-form {
 	background-color: rgba($color: cadetblue, $alpha: 0.3);
 	display: grid;
+	grid-template-rows: 1fr 1.5em;
 	align-items: center;
 
 	form {
@@ -59,7 +60,7 @@
 			&::after {
 				content: '';
 				position: absolute;
-				transition: width 200ms;
+				transition: width 350ms;
 				width: 0;
 				height: 3px;
 				background-color: crimson;

@@ -7,6 +7,7 @@ function AboutMe() {
 		<section id='about-me'>
 			{/* I'll list all the languages I know here */}
 			{/* Basically my resume but more stylish */}
+			About me
 		</section>
 	);
 }

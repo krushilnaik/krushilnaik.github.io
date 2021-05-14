@@ -1,3 +1,4 @@
+import { sample } from 'lodash';
 import React, { useState } from 'react';
 import Links from './Links';
 
@@ -7,6 +8,15 @@ function ContactForm() {
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [message, setMessage] = useState('');
+
+	const submitButtonOptions = [
+		'Send carrier pigeon',
+		'Upload node_modules',
+		'Text your crush (me)',
+		'Poke my shoulder',
+		'Form blood-pact',
+		'Tell me about it'
+	];
 
 	return (
 		<section id='contact-form'>
@@ -44,7 +54,7 @@ function ContactForm() {
 						onChange={event => setMessage(event.currentTarget.value)}
 					/>
 				</div>
-				<button type='submit'>Send carrier pigeon</button>
+				<button type='submit'>{sample(submitButtonOptions)}</button>
 			</form>
 
 			<Links />

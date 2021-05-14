@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Footer from './Footer';
+import Links from './Links';
 
 import './scss/ContactForm.scss';
 
@@ -47,7 +47,7 @@ function ContactForm() {
 				<button type='submit'>Send carrier pigeon</button>
 			</form>
 
-			<Footer />
+			<Links />
 		</section>
 	);
 }

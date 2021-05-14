@@ -18,7 +18,7 @@ export const calculateAge = date => {
 
 	if (
 		todaysDate.getMonth() < birthDate.getMonth() ||
-		(todaysDate.getMonth() == birthDate.getMonth() && todaysDate.getDate() < birthDate.getDate())
+		(todaysDate.getMonth() === birthDate.getMonth() && todaysDate.getDate() < birthDate.getDate())
 	) {
 		years--;
 	}

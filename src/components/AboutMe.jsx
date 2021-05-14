@@ -1,5 +1,5 @@
 import React from 'react';
-import { calculateAge } from '../util/js/functions';
+// import { calculateAge } from '../util/js/functions';
 
 import './scss/AboutMe.scss';
 
@@ -18,7 +18,7 @@ function AboutMe() {
 							( pronounced <span style={{ color: 'crimson' }}>'crucial'</span> )
 						</span>
 					</div>
-					<p>{calculateAge('09/07/1996')} years old</p>
+					{/* <p>{calculateAge('09/07/1996')} years old</p> */}
 				</aside>
 
 				<article>This is where info about me will go. Hobbies, interests, all that good stuff.</article>

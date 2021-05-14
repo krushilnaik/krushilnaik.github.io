@@ -1,7 +1,7 @@
 #contact-form {
 	background-color: rgba($color: cadetblue, $alpha: 0.3);
 	display: grid;
-	grid-template-rows: 1fr 1.5em;
+	grid-template-rows: 1fr auto;
 	align-items: center;
 
 	form {

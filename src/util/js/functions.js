@@ -3,7 +3,7 @@
  * @param {string} string string to 'slug-igy'
  */
 export function slugify(string) {
-	return string.toLowerCase().replace(/ /g, '-');
+	return string.toLowerCase().replace(/[ \/~]/g, '-');
 }
 
 /**

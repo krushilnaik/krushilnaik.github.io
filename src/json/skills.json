@@ -1,0 +1,14 @@
+[
+	{
+		"group": "Languages",
+		"skills": ["JavaScript", "HTML5", "CSS3", "Python 3", "C++", "Java"]
+	},
+	{
+		"group": "Frameworks/Technologies",
+		"skills": ["ReactJS", "Angular", "ExpressJS", "NodeJS", "AnimeJS", "Webpack"]
+	},
+	{
+		"group": "Miscellaneous",
+		"skills": ["SCSS", "Netlify", "Heroku", "Gatsby"]
+	}
+]

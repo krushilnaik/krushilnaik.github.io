@@ -46,7 +46,10 @@ function SkillSet() {
 		}
 
 		const getScrollPosition = () => {
-			if (document.querySelector('#root').scrollTop >= componentRef.current.getBoundingClientRect().top) {
+			if (
+				document.querySelector('#root').scrollTop >=
+				componentRef.current.getBoundingClientRect().top * 1.5
+			) {
 				setIsInViewport(true);
 				document.querySelector('#root').removeEventListener('scroll', getScrollPosition);
 			}

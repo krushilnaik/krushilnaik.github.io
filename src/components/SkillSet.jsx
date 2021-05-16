@@ -13,8 +13,7 @@ function SkillSet() {
 			translateX: [300, 0],
 			opacity: [0, 1],
 			easing: 'easeOutQuad',
-			delay: anime.stagger(200),
-			autoplay: false
+			delay: anime.stagger(200)
 		});
 
 		anime({
@@ -22,8 +21,7 @@ function SkillSet() {
 			duration: 300,
 			width: ['0', '100%'],
 			easing: 'linear',
-			delay: 500,
-			autoplay: false
+			delay: 500
 		});
 
 		for (const group of skills.map(skills => skills.group)) {
@@ -33,8 +31,7 @@ function SkillSet() {
 				translateY: [150, 0],
 				opacity: [0, 1],
 				easing: 'easeOutQuad',
-				delay: anime.stagger(100, { start: 500 }),
-				autoplay: false
+				delay: anime.stagger(100, { start: 500 })
 			});
 		}
 	});

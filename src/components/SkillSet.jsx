@@ -16,14 +16,6 @@ function SkillSet() {
 			delay: anime.stagger(200)
 		});
 
-		anime({
-			targets: '.skill-groups h3::before',
-			duration: 300,
-			width: ['0', '100%'],
-			easing: 'linear',
-			delay: 500
-		});
-
 		for (const group of skills.map(skills => skills.group)) {
 			anime({
 				targets: `#${slugify(group)} ul li`,

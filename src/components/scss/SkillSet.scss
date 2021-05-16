@@ -5,7 +5,6 @@
 
 	display: grid;
 	align-items: center;
-	// justify-content: center;
 
 	.content {
 		background-color: rgba($color: black, $alpha: 0.07);
@@ -19,11 +18,21 @@
 		.skill-group {
 			h3 {
 				font-size: 30px;
+				position: relative;
 
 				.note {
 					opacity: 0.6;
 					font-size: 25px;
 					font-weight: normal;
+				}
+
+				&::before {
+					position: absolute;
+					bottom: 0;
+					content: '';
+					height: 2px;
+					width: 100%;
+					background-color: crimson;
 				}
 			}
 

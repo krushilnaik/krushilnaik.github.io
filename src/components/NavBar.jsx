@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { slugify } from '../util/js/functions';
+import { slugify } from '../utils/js/functions';
 
 import './scss/NavBar.scss';
 

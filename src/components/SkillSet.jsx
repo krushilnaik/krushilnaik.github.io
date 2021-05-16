@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 
 import './scss/SkillSet.scss';
 import skills from '../json/skills.json';
-import { slugify } from '../util/js/functions';
+import { slugify } from '../utils/js/functions';
 
 function SkillSet() {
 	useEffect(() => {

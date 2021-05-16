@@ -18,10 +18,11 @@ body {
 	height: 100%;
 	overflow: scroll;
 
-	background: #0f2027;
-	background: linear-gradient(-45deg, #2c5364, #203a43, #0f2027);
-	/* background-size: 200% 200%; */
-	/* animation: backgroundAnimation 8s infinite; */
+	background: #c31432;
+	background: linear-gradient(-45deg, #240b36, #af1313);
+
+	/* background-size: 400% 400%; */
+	/* animation: backgroundAnimation 10s infinite; */
 }
 
 @keyframes backgroundAnimation {

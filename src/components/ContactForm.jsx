@@ -19,11 +19,11 @@ function ContactForm() {
 	];
 
 	return (
-		<section id='contact-form'>
+		<section id='how-to-find-me'>
 			<form action='POST'>
 				<h3>Caught your attention?</h3>
 
-				<div id='name' className='input-wrapper'>
+				<div id='name-field' className='input-wrapper'>
 					<input
 						type='text'
 						name='name'
@@ -33,7 +33,7 @@ function ContactForm() {
 						onChange={event => setName(event.currentTarget.value)}
 					/>
 				</div>
-				<div id='email' className='input-wrapper'>
+				<div id='email-field' className='input-wrapper'>
 					<input
 						type='email'
 						name='email'
@@ -43,7 +43,7 @@ function ContactForm() {
 						onChange={event => setEmail(event.currentTarget.value)}
 					/>
 				</div>
-				<div id='message' className='input-wrapper'>
+				<div id='message-field' className='input-wrapper'>
 					<textarea
 						name='message'
 						// id='message'

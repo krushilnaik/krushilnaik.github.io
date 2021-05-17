@@ -1,5 +1,5 @@
-#contact-form {
-	// background-color: rgba($color: cadetblue, $alpha: 0.07);
+#how-to-find-me {
+	// background-color: rgba($color: aliceblue, $alpha: 0.05);
 	display: grid;
 	grid-template-rows: 1fr auto;
 	align-items: center;
@@ -63,7 +63,7 @@
 				transition: width 350ms;
 				width: 0;
 				height: 3px;
-				background-color: crimson;
+				background-color: rgb(255, 29, 74);
 				bottom: 0;
 				left: 0;
 			}

@@ -5,7 +5,7 @@ import './scss/AboutMe.scss';
 
 function AboutMe() {
 	return (
-		<section id='about-me'>
+		<section id='who-i-am'>
 			{/* Introduce myself. Name, age, etc. */}
 			{/* Add a picture of me */}
 			{/* Hobbies/what I do in my free time */}

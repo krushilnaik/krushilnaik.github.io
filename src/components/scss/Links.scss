@@ -1,5 +1,13 @@
 $icon-size: 30px;
 
+.popper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: rgba($color: honeydew, $alpha: 0.6);
+	padding-bottom: 5px;
+}
+
 .links {
 	padding: 5px 15px;
 	margin: auto;

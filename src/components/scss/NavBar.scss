@@ -25,7 +25,9 @@ nav {
 			list-style-position: inside;
 			list-style-type: none;
 
-			a {
+			button {
+				background-color: transparent;
+				border: none;
 				font-size: 18px;
 				color: honeydew;
 				text-decoration: none;
@@ -33,6 +35,7 @@ nav {
 
 				&:hover {
 					color: crimson;
+					cursor: pointer;
 				}
 			}
 		}

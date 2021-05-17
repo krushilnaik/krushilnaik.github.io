@@ -1,12 +1,15 @@
 import anime from 'animejs';
-import React, { createRef, useEffect, useRef, useState } from 'react';
+import React, { createRef, useEffect, useRef } from 'react';
 
 import './scss/SkillSet.scss';
 import skills from '../json/skills.json';
 import { slugify } from '../utils/js/functions';
 
 function SkillSet() {
-	const [isInViewport, setIsInViewport] = useState(false);
+	/**
+	 * @type {React.MutableRefObject<IntersectionObserver>}
+	 */
+	let observer = useRef(null);
 
 	/**
 	 * @type {React.MutableRefObject<anime.AnimeInstance[]>}
@@ -45,28 +48,29 @@ function SkillSet() {
 			);
 		}
 
-		const getScrollPosition = () => {
-			if (
-				document.querySelector('#root').scrollTop >=
-				componentRef.current.getBoundingClientRect().top * 1.5
-			) {
-				setIsInViewport(true);
-				document.querySelector('#root').removeEventListener('scroll', getScrollPosition);
+		observer.current = new IntersectionObserver(
+			() => {
+				animationDrivers.current.forEach(animation => animation.play());
+			},
+			{
+				root: document.querySelector('#root'),
+				rootMargin: '0px',
+				threshold: 0.25
 			}
-		};
+		);
 
-		if (!isInViewport) document.querySelector('#root').addEventListener('scroll', getScrollPosition);
+		observer.current.observe(componentRef.current);
 	});
 
-	useEffect(() => {
-		if (isInViewport) animationDrivers.current.forEach(animation => animation.play());
-	}, [isInViewport]);
-
 	return (
-		<section id='skill-set' ref={componentRef}>
+		<section id='what-i-know' ref={componentRef}>
 			<div className='content'>
 				{skills.map(skillGroup => (
-					<div key={slugify(skillGroup.group)} id={slugify(skillGroup.group)} className='skill-group'>
+					<div
+						key={slugify(skillGroup.group)}
+						id={slugify(skillGroup.group)}
+						className='skill-group'
+					>
 						<h3>{skillGroup.group}</h3>
 						<ul>
 							{skillGroup.skills.map(skill => (

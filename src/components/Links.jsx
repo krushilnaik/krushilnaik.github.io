@@ -12,7 +12,6 @@ function Links() {
 				<FontAwesomeIcon icon={faChevronDown} />
 			</div>
 			<div className='links'>
-				{/* GitHub, LinkedIn, Twitter, Gmail */}
 				<a id='github' href='https://github.com/krushilnaik' target='_blank' rel='noreferrer'>
 					<i className='fab fa-github-square'></i>
 				</a>

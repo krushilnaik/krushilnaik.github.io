@@ -27,7 +27,6 @@ function ContactForm() {
 					<input
 						type='text'
 						name='name'
-						// id='name'
 						placeholder='Name:'
 						defaultValue={name}
 						onChange={event => setName(event.currentTarget.value)}
@@ -37,7 +36,6 @@ function ContactForm() {
 					<input
 						type='email'
 						name='email'
-						// id='email'
 						placeholder='Email:'
 						defaultValue={email}
 						onChange={event => setEmail(event.currentTarget.value)}
@@ -46,7 +44,6 @@ function ContactForm() {
 				<div id='message-field' className='input-wrapper'>
 					<textarea
 						name='message'
-						// id='message'
 						cols={30}
 						rows={10}
 						placeholder='Message:'

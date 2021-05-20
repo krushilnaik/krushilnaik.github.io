@@ -1,14 +1,30 @@
 [
 	{
 		"group": "Languages",
-		"skills": ["JavaScript", "HTML5", "CSS3", "Python 3", "C++", "Java"]
+		"skills": [
+			"JavaScript",
+			"HTML5 (semantics, accessibility)",
+			"CSS3",
+			"Python 3",
+			"C++",
+			"Java"
+		]
 	},
 	{
 		"group": "Frameworks/Technologies",
-		"skills": ["ReactJS", "Angular", "ExpressJS", "NodeJS", "AnimeJS", "Webpack"]
+		"skills": [
+			"ReactJS (w/ Redux)",
+			"React Native",
+			"Angular",
+			"ExpressJS",
+			"NodeJS",
+			"AnimeJS",
+			"Webpack",
+			"Django"
+		]
 	},
 	{
 		"group": "Miscellaneous",
-		"skills": ["SCSS", "Netlify", "Heroku", "Gatsby"]
+		"skills": ["SCSS", "Netlify", "Heroku", "Gatsby", "MongoDB"]
 	}
 ]

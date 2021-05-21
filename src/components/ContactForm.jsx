@@ -1,5 +1,7 @@
 import { sample } from 'lodash';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import InView from 'react-intersection-observer';
+import { PageContext } from '../utils/js/contexts';
 import Links from './Links';
 
 import './scss/ContactForm.scss';
@@ -8,6 +10,8 @@ function ContactForm() {
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [message, setMessage] = useState('');
+
+	const { setActivePage } = useContext(PageContext);
 
 	const submitButtonOptions = [
 		'Send carrier pigeon',
@@ -19,7 +23,14 @@ function ContactForm() {
 	];
 
 	return (
-		<section id='how-to-find-me'>
+		<InView
+			as='section'
+			id='how-to-find-me'
+			threshold={0.7}
+			onChange={(inView, _entry) => {
+				inView && setActivePage('How to find me');
+			}}
+		>
 			<form action='POST'>
 				<h3>Caught your attention?</h3>
 
@@ -55,7 +66,7 @@ function ContactForm() {
 			</form>
 
 			<Links />
-		</section>
+		</InView>
 	);
 }
 

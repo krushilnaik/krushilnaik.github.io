@@ -1,15 +1,26 @@
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import React, { useContext } from 'react';
+import InView from 'react-intersection-observer';
+import { PageContext } from '../utils/js/contexts';
 
 import './scss/Intro.scss';
 
 function Intro() {
+	const { setActivePage } = useContext(PageContext);
+
 	return (
-		<section id='intro'>
+		<InView
+			as='section'
+			id='intro'
+			threshold={0.7}
+			onChange={(inView, _entry) => {
+				inView && setActivePage('Intro');
+			}}
+		>
 			<h2>Scroll down to start, or use the nav bar up top to skip ahead</h2>
 			<FontAwesomeIcon icon={faChevronDown} size='5x' color='honeydew' />
-		</section>
+		</InView>
 	);
 }
 

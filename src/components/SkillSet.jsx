@@ -1,25 +1,19 @@
 import anime from 'animejs';
-import React, { createRef, useEffect, useRef } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 
 import './scss/SkillSet.scss';
 import skills from '../json/skills.json';
 import { slugify } from '../utils/js/functions';
+import InView from 'react-intersection-observer';
+import { PageContext } from '../utils/js/contexts';
 
 function SkillSet() {
-	/**
-	 * @type {React.MutableRefObject<IntersectionObserver>}
-	 */
-	let observer = useRef(null);
+	const { setActivePage } = useContext(PageContext);
 
 	/**
 	 * @type {React.MutableRefObject<anime.AnimeInstance[]>}
 	 */
 	let animationDrivers = useRef([]);
-
-	/**
-	 * @type {React.RefObject<HTMLTableSectionElement>}
-	 */
-	let componentRef = createRef();
 
 	useEffect(() => {
 		animationDrivers.current.push(
@@ -47,23 +41,18 @@ function SkillSet() {
 				})
 			);
 		}
-
-		observer.current = new IntersectionObserver(
-			() => {
-				animationDrivers.current.forEach(animation => animation.play());
-			},
-			{
-				root: document.querySelector('#root'),
-				rootMargin: '0px',
-				threshold: 0.25
-			}
-		);
-
-		observer.current.observe(componentRef.current);
 	});
 
 	return (
-		<section id='what-i-know' ref={componentRef}>
+		<InView
+			as='section'
+			id='what-i-know'
+			threshold={0.7}
+			onChange={(inView, _entry) => {
+				inView && setActivePage('What I know');
+				animationDrivers.current.forEach(animation => animation.play());
+			}}
+		>
 			<div className='content'>
 				{skills.map(skillGroup => (
 					<div
@@ -80,7 +69,7 @@ function SkillSet() {
 					</div>
 				))}
 			</div>
-		</section>
+		</InView>
 	);
 }
 

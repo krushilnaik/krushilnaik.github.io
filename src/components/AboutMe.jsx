@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import InView from 'react-intersection-observer';
+import { PageContext } from '../utils/js/contexts';
 
 import './scss/AboutMe.scss';
 
 function AboutMe() {
+	const { setActivePage } = useContext(PageContext);
+
 	return (
-		<section id='who-i-am'>
+		<InView
+			as='section'
+			id='who-i-am'
+			threshold={0.7}
+			onChange={(inView, _entry) => {
+				inView && setActivePage('Who I am');
+			}}
+		>
 			<div className='content'>
 				<aside>
 					<img src='assets/images/avatar.png' alt='crucial avatar' />
@@ -16,9 +27,12 @@ function AboutMe() {
 					</div>
 				</aside>
 
-				<article>Coding since birth.</article>
+				<article>
+					Lifelong developer-in-booting. Might go on a rant if you ask for my opinion on a
+					specific framework. Or about anime.
+				</article>
 			</div>
-		</section>
+		</InView>
 	);
 }
 

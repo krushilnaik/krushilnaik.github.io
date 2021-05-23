@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-scroll';
 import { PageContext } from '../utils/js/contexts';
 import { slugify } from '../utils/js/functions';
 
@@ -15,7 +16,7 @@ function NavBar() {
 		 * all the anchor tags rendered to the nav bar
 		 * @type {NodeListOf<HTMLAnchorElement>}
 		 */
-		const renderedLinks = document.querySelectorAll('nav ul li button');
+		const renderedLinks = document.querySelectorAll('nav ul li a');
 
 		renderedLinks.forEach(link => {
 			navRef.current.push(link.offsetWidth);
@@ -46,15 +47,15 @@ function NavBar() {
 							<span className='navigator' style={navigatorStyle}></span>
 							{links.map(link => (
 								<li key={slugify(link)}>
-									{/* <Link
-										to={`#${slugify(link)}`}
-										onClick={() => setActivePage(link)}
+									<Link
+										to={slugify(link)}
+										spy={true}
 										smooth={true}
 										duration={500}
+										onSetActive={() => setActivePage(link)}
 									>
-										{Link}
-									</Link> */}
-									<button onClick={() => setActivePage(link)}>{link}</button>
+										{link}
+									</Link>
 								</li>
 							))}
 						</ul>

@@ -9,7 +9,6 @@
 
 body {
 	width: 100vw;
-	height: 100vh;
 	max-width: 100%;
 }
 
@@ -20,6 +19,7 @@ body {
 
 	background: #c31432;
 	background: linear-gradient(-45deg, #240b36, #af1313);
+	background-attachment: fixed;
 
 	/* background-size: 400% 400%; */
 	/* animation: backgroundAnimation 10s infinite; */

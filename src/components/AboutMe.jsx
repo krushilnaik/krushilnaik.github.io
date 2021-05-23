@@ -28,8 +28,8 @@ function AboutMe() {
 				</aside>
 
 				<article>
-					Lifelong developer-in-booting. Might go on a rant if you ask for my opinion on a
-					specific framework. Or about anime.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta vitae enim voluptas
+					impedit provident. Accusamus.
 				</article>
 			</div>
 		</InView>

@@ -62,6 +62,8 @@ function SkillSet() {
 					>
 						<h3>{skillGroup.group}</h3>
 						<ul>
+							{/* Plan to have each of these link both a deployed site using that technology */}
+							{/* or the GitHub repo behind the deployed site. Site viewer's choice */}
 							{skillGroup.skills.map(skill => (
 								<li key={slugify(skill)}>{skill}</li>
 							))}

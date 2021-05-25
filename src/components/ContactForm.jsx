@@ -1,3 +1,4 @@
+import emailjs from 'emailjs-com';
 import { sample } from 'lodash';
 import React, { useContext, useState } from 'react';
 import InView from 'react-intersection-observer';
@@ -6,6 +7,17 @@ import Links from './Links';
 
 import './scss/ContactForm.scss';
 
+const submitButtonOptions = [
+	'Send carrier pigeon',
+	'Upload node_modules',
+	'Text your crush (me)',
+	'Poke my shoulder',
+	'Form blood-pact',
+	'Tell me about it'
+];
+
+const buttonText = sample(submitButtonOptions);
+
 function ContactForm() {
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
@@ -13,14 +25,16 @@ function ContactForm() {
 
 	const { setActivePage } = useContext(PageContext);
 
-	const submitButtonOptions = [
-		'Send carrier pigeon',
-		'Upload node_modules',
-		'Text your crush (me)',
-		'Poke my shoulder',
-		'Form blood-pact',
-		'Tell me about it'
-	];
+	/**
+	 * Send out the email
+	 * @param {React.SyntheticEvent<HTMLFormElement>} event
+	 */
+	const handleFormSubmit = async event => {
+		event.preventDefault();
+		console.log('Handling form submit...');
+
+		emailjs.sendForm('gmail', 'dotdev', event.currentTarget, process.env.EMAILJS_USER_ID);
+	};
 
 	return (
 		<InView
@@ -31,7 +45,9 @@ function ContactForm() {
 				inView && setActivePage('How to find me');
 			}}
 		>
-			<form action='POST'>
+			{/* This will animate into a paper airplane and fly off */}
+			{/* afterwards, say 'message has been sent' or something */}
+			<form onSubmit={handleFormSubmit}>
 				<h3>Caught your attention?</h3>
 
 				<div id='name-field' className='input-wrapper'>
@@ -62,7 +78,7 @@ function ContactForm() {
 						onChange={event => setMessage(event.currentTarget.value)}
 					/>
 				</div>
-				<button type='submit'>{sample(submitButtonOptions)}</button>
+				<button type='submit'>{buttonText}</button>
 			</form>
 
 			<Links />

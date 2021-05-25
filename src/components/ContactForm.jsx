@@ -27,13 +27,19 @@ function ContactForm() {
 
 	/**
 	 * Send out the email
-	 * @param {React.SyntheticEvent<HTMLFormElement>} event
+	 * @param {React.SyntheticEvent<HTMLButtonElement>} event
 	 */
 	const handleFormSubmit = async event => {
 		event.preventDefault();
 		console.log('Handling form submit...');
+		console.log(process.env.EMAILJS_USER_ID);
 
-		emailjs.sendForm('gmail', 'dotdev', event.currentTarget, process.env.EMAILJS_USER_ID);
+		// emailjs.send(
+		// 	'krushil_gmail',
+		// 	'dotdev',
+		// 	{ name, email, message },
+		// 	process.env.EMAILJS_USER_ID
+		// );
 	};
 
 	return (
@@ -47,7 +53,7 @@ function ContactForm() {
 		>
 			{/* This will animate into a paper airplane and fly off */}
 			{/* afterwards, say 'message has been sent' or something */}
-			<form onSubmit={handleFormSubmit}>
+			<form>
 				<h3>Caught your attention?</h3>
 
 				<div id='name-field' className='input-wrapper'>
@@ -78,7 +84,9 @@ function ContactForm() {
 						onChange={event => setMessage(event.currentTarget.value)}
 					/>
 				</div>
-				<button type='submit'>{buttonText}</button>
+				<button type='submit' onClick={handleFormSubmit}>
+					{buttonText}
+				</button>
 			</form>
 
 			<Links />

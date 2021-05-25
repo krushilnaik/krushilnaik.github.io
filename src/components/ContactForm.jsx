@@ -1,4 +1,4 @@
-import emailjs from 'emailjs-com';
+// import emailjs from 'emailjs-com';
 import { sample } from 'lodash';
 import React, { useContext, useState } from 'react';
 import InView from 'react-intersection-observer';

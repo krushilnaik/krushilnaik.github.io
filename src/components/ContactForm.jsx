@@ -32,7 +32,7 @@ function ContactForm() {
 	const handleFormSubmit = async event => {
 		event.preventDefault();
 		console.log('Handling form submit...');
-		console.log(process.env.EMAILJS_USER_ID);
+		console.log(process.env);
 
 		// emailjs.send(
 		// 	'krushil_gmail',

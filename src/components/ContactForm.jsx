@@ -1,4 +1,4 @@
-// import emailjs from 'emailjs-com';
+import emailjs from 'emailjs-com';
 import { sample } from 'lodash';
 import React, { useContext, useState } from 'react';
 import InView from 'react-intersection-observer';
@@ -32,14 +32,14 @@ function ContactForm() {
 	const handleFormSubmit = async event => {
 		event.preventDefault();
 		console.log('Handling form submit...');
-		console.log(process.env);
+		// console.log(process.env);
 
-		// emailjs.send(
-		// 	'krushil_gmail',
-		// 	'dotdev',
-		// 	{ name, email, message },
-		// 	process.env.EMAILJS_USER_ID
-		// );
+		emailjs.send(
+			'krushil_gmail',
+			'dotdev',
+			{ name, email, message },
+			'user_xw0CXtf9Bu7mFYEIRWArv'
+		);
 	};
 
 	return (

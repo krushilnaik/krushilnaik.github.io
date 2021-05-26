@@ -1,5 +1,4 @@
 #how-to-find-me {
-	// background-color: rgba($color: aliceblue, $alpha: 0.05);
 	display: grid;
 	grid-template-rows: 1fr auto;
 	align-items: center;
@@ -14,6 +13,28 @@
 		margin: auto;
 
 		grid-template-areas: 'title title' 'name email' 'message message' 'submit submit';
+
+		&.submitted {
+			position: relative;
+
+			&::after {
+				content: "Thanks! I'll get back to you soon.";
+				position: absolute;
+				width: max-content;
+				color: rgba($color: honeydew, $alpha: 0.8);
+				font-size: 35px;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				animation: fadeIn 300ms;
+			}
+		}
+
+		> * {
+			&.hidden {
+				display: none;
+			}
+		}
 
 		h3 {
 			grid-area: title;
@@ -43,10 +64,6 @@
 			&::placeholder {
 				color: azure;
 			}
-		}
-
-		input {
-			height: 1.5em;
 		}
 
 		.input-wrapper {
@@ -106,5 +123,25 @@
 				color: crimson;
 			}
 		}
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
 	}
 }

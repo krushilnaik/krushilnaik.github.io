@@ -1,6 +1,6 @@
 import emailjs from 'emailjs-com';
 import { sample } from 'lodash';
-import React, { useContext, useState } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import InView from 'react-intersection-observer';
 import { PageContext } from '../utils/js/contexts';
 import Links from './Links';
@@ -23,6 +23,11 @@ function ContactForm() {
 	const [email, setEmail] = useState('');
 	const [message, setMessage] = useState('');
 
+	/**
+	 * @type {React.MutableRefObject<HTMLFormElement>}
+	 */
+	const formRef = useRef(null);
+
 	const { setActivePage } = useContext(PageContext);
 
 	/**
@@ -32,7 +37,11 @@ function ContactForm() {
 	const handleFormSubmit = async event => {
 		event.preventDefault();
 		console.log('Handling form submit...');
-		// console.log(process.env);
+
+		let { current: form } = formRef;
+
+		Array.from(form.querySelectorAll('*')).forEach(input => input.classList.add('hidden'));
+		form.classList.add('submitted');
 
 		emailjs.send(
 			'krushil_gmail',
@@ -53,7 +62,7 @@ function ContactForm() {
 		>
 			{/* This will animate into a paper airplane and fly off */}
 			{/* afterwards, say 'message has been sent' or something */}
-			<form>
+			<form ref={formRef}>
 				<h3>Caught your attention?</h3>
 
 				<div id='name-field' className='input-wrapper'>

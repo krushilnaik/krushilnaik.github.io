@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from 'react';
-import { Link } from 'react-scroll';
 import { PageContext } from '../utils/js/contexts';
 import { slugify } from '../utils/js/functions';
 
 import './scss/NavBar.scss';
 
+const links = ['Who I am', 'What I know', 'How to find me'];
+
 function NavBar() {
-	const links = ['Who I am', 'What I know', 'How to find me'];
 	let navRef = useRef([]);
 
 	useEffect(() => {
@@ -21,11 +21,11 @@ function NavBar() {
 		renderedLinks.forEach(link => {
 			navRef.current.push(link.offsetWidth);
 		});
-	});
+	}, []);
 
 	return (
 		<PageContext.Consumer>
-			{({ activePage, setActivePage }) => {
+			{({ activePage }) => {
 				const view = links.indexOf(activePage);
 				console.log(`View is now '${activePage}'`);
 
@@ -47,15 +47,7 @@ function NavBar() {
 							<span className='navigator' style={navigatorStyle}></span>
 							{links.map(link => (
 								<li key={slugify(link)}>
-									<Link
-										to={slugify(link)}
-										spy={true}
-										smooth={true}
-										duration={500}
-										onSetActive={() => setActivePage(link)}
-									>
-										{link}
-									</Link>
+									<a href={`#${slugify(link)}`}>{link}</a>
 								</li>
 							))}
 						</ul>

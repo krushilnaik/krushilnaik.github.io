@@ -11,6 +11,7 @@
 		"resolveJsonModule": true,
 		"moduleResolution": "node",
 		"noImplicitAny": true,
-		"module": "commonJS"
-	}
+		"module": "es6"
+	},
+	"exclude": ["node_modules", "build"]
 }

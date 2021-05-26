@@ -25,3 +25,11 @@ export const calculateAge = date => {
 
 	return years;
 };
+
+/**
+ * Get a random element from an array
+ * @param {any[]} array
+ */
+export const randomFrom = array => {
+	return array[Math.floor(Math.random() * array.length)];
+};

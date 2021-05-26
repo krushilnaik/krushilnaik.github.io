@@ -1,8 +1,8 @@
 import emailjs from 'emailjs-com';
-import { sample } from 'lodash';
 import React, { useContext, useRef, useState } from 'react';
 import InView from 'react-intersection-observer';
 import { PageContext } from '../utils/js/contexts';
+import { randomFrom } from '../utils/js/functions';
 import Links from './Links';
 
 import './scss/ContactForm.scss';
@@ -16,12 +16,11 @@ const submitButtonOptions = [
 	'Tell me about it'
 ];
 
-const buttonText = sample(submitButtonOptions);
-
 function ContactForm() {
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [message, setMessage] = useState('');
+	const buttonText = randomFrom(submitButtonOptions);
 
 	/**
 	 * @type {React.MutableRefObject<HTMLFormElement>}

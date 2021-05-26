@@ -19,7 +19,7 @@ function Intro() {
 			}}
 		>
 			<h2>Scroll down to start, or use the nav bar up top to skip ahead</h2>
-			<FontAwesomeIcon icon={faChevronDown} size='5x' color='honeydew' />
+			<FontAwesomeIcon icon={faChevronDown} size='4x' color='honeydew' />
 		</InView>
 	);
 }

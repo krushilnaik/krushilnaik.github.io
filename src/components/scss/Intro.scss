@@ -7,15 +7,16 @@
 	align-items: flex-end;
 
 	h2 {
-		color: honeydew;
+		color: rgba($color: honeydew, $alpha: 0.6);
 		font-size: 45px;
-		opacity: 75%;
 	}
 
 	svg {
 		margin: 0 auto;
 
-		opacity: 60%;
+		path {
+			fill: rgba($color: honeydew, $alpha: 0.5);
+		}
 
 		// animation: hoverDown 1.5s infinite;
 	}

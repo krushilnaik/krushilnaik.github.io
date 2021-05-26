@@ -37,3 +37,6 @@ jobs:
            run: |
               echo Add other actions to build,
               echo test, and deploy your project.
+         - name: Check is environment variables loaded
+           run:
+               echo $EMAILJS_USER_ID

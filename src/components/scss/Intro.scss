@@ -13,6 +13,7 @@
 
 	svg {
 		margin: 0 auto;
+		transform: translate3d(-50%, 0, 0);
 
 		path {
 			fill: rgba($color: honeydew, $alpha: 0.5);

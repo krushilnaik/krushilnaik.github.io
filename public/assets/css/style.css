@@ -21,8 +21,8 @@ body {
 	background: linear-gradient(-45deg, #240b36, #af1313);
 	background-attachment: fixed;
 
-	/* background-size: 400% 400%; */
-	/* animation: backgroundAnimation 10s infinite; */
+	background-size: 400% 400%;
+	animation: backgroundAnimation 10s infinite;
 }
 
 @keyframes backgroundAnimation {

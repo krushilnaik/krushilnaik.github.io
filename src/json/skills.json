@@ -3,8 +3,10 @@
 		"group": "Languages",
 		"skills": [
 			"JavaScript",
+			"TypeScript",
 			"HTML5 (semantics, accessibility)",
 			"CSS3",
+			"SCSS",
 			"Python 3",
 			"C++",
 			"Java"
@@ -25,6 +27,6 @@
 	},
 	{
 		"group": "Miscellaneous",
-		"skills": ["SCSS", "Netlify", "Heroku", "Gatsby", "MongoDB"]
+		"skills": ["Netlify", "Heroku", "Gatsby", "MongoDB"]
 	}
 ]

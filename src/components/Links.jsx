@@ -1,5 +1,3 @@
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { Fragment } from 'react';
 
 import './scss/Links.scss';
@@ -9,7 +7,7 @@ function Links() {
 		<Fragment>
 			<div className='popper'>
 				<span>Or use the links below</span>
-				<FontAwesomeIcon icon={faChevronDown} />
+				<i className='fas fa-chevron-down'></i>
 			</div>
 			<div className='links'>
 				<a id='github' href='https://github.com/krushilnaik' target='_blank' rel='noreferrer'>

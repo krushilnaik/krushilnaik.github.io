@@ -11,6 +11,8 @@
 		"resolveJsonModule": true,
 		"moduleResolution": "node",
 		"noImplicitAny": true,
+		"declaration": false,
+		"declarationMap": false,
 		"module": "es6"
 	},
 	"exclude": ["node_modules", "build"]

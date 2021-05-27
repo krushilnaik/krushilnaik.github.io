@@ -11,13 +11,11 @@
 		font-size: 45px;
 	}
 
-	svg {
+	i {
 		margin: 0 auto;
 		transform: translate3d(-50%, 0, 0);
-
-		path {
-			fill: rgba($color: honeydew, $alpha: 0.5);
-		}
+		font-size: 60px;
+		color: rgba($color: honeydew, $alpha: 0.5);
 
 		animation: hoverDown 1.5s infinite;
 	}

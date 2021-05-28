@@ -13,8 +13,6 @@ function App() {
 
 	return (
 		<PageContext.Provider value={{ activePage, setActivePage }}>
-			<noscript>You need to enable JavaScript to view this site.</noscript>
-
 			<header>
 				<NavBar />
 			</header>

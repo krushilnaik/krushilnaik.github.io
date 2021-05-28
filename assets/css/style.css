@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
 
 html {
 	scroll-behavior: smooth;
@@ -8,23 +8,17 @@ html {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Heebo', sans-serif;
+	font-family: sans-serif;
 }
 
 body {
 	width: 100vw;
 	max-width: 100%;
-}
-
-#root {
-	width: 100%;
-	height: 100%;
-	overflow: scroll;
+	overflow-x: hidden;
 
 	background: #c31432;
 	background: linear-gradient(-45deg, #240b36, #af1313);
 	background-attachment: fixed;
-
 	background-size: 400% 400%;
 	animation: backgroundAnimation 10s infinite;
 }

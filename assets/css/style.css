@@ -9,12 +9,16 @@ html {
 	padding: 0;
 	box-sizing: border-box;
 	font-family: sans-serif;
+	/* border: dashed 2px red; */
 }
 
 body {
 	width: 100vw;
 	max-width: 100%;
-	overflow-x: hidden;
+}
+
+#root {
+	width: 100%;
 
 	background: #c31432;
 	background: linear-gradient(-45deg, #240b36, #af1313);

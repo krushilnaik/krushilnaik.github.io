@@ -21,12 +21,11 @@
 			"ExpressJS",
 			"NodeJS",
 			"AnimeJS",
-			"Webpack",
 			"Django"
 		]
 	},
 	{
 		"group": "Miscellaneous",
-		"skills": ["Netlify", "Heroku", "Gatsby", "MongoDB"]
+		"skills": ["Netlify", "Webpack", "Heroku", "Gatsby", "MongoDB"]
 	}
 ]

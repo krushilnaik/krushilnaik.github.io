@@ -27,3 +27,6 @@ yarn-error.log*
 
 # ssl stuff
 *.pem
+
+# playground for new features
+private

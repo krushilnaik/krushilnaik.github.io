@@ -19,18 +19,18 @@
 			},
 			{
 				"skill": "CSS3",
-				"deployedSite": "",
-				"sourceCode": ""
+				"deployedSite": "https://krushilnaik.dev/Google-Clone/",
+				"sourceCode": "https://github.com/krushilnaik/Google-Clone"
 			},
 			{
 				"skill": "SCSS",
-				"deployedSite": "",
-				"sourceCode": ""
+				"deployedSite": "https://krushilnaik.dev/",
+				"sourceCode": "https://github.com/krushilnaik/krushilnaik.github.io"
 			},
 			{
 				"skill": "Python 3",
 				"deployedSite": "",
-				"sourceCode": ""
+				"sourceCode": "https://github.com/krushilnaik/SubWoofer"
 			}
 		]
 	},
@@ -70,7 +70,7 @@
 			{
 				"skill": "NodeJS",
 				"deployedSite": "",
-				"sourceCode": ""
+				"sourceCode": "https://github.com/krushilnaik/README-Generator"
 			},
 			{
 				"skill": "AnimeJS",

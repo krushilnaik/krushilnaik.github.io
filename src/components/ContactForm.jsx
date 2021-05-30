@@ -25,7 +25,6 @@ function ContactForm() {
 	 */
 	const handleFormSubmit = async event => {
 		event.preventDefault();
-		console.log('Handling form submit...');
 
 		let { current: form } = formRef;
 		let plane = form.querySelector('.airplane');

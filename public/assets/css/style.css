@@ -25,7 +25,7 @@ body {
 	width: 100%;
 
 	background: #c31432;
-	background: radial-gradient(ellipse at top, green, rgb(0, 180, 180), purple);
+	background: radial-gradient(ellipse at top, green, rgb(0, 180, 180), rgb(197, 58, 197));
 	background-attachment: fixed;
 	background-size: 400% 400%;
 	animation: backgroundAnimation 30s infinite;

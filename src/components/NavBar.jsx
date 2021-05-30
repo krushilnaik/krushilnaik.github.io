@@ -27,7 +27,6 @@ function NavBar() {
 		<PageContext.Consumer>
 			{({ activePage }) => {
 				const view = links.indexOf(activePage);
-				// console.log(`View is now '${activePage}'`);
 
 				/**
 				 * @type {React.CSSProperties}

@@ -25,10 +25,10 @@ body {
 	width: 100%;
 
 	background: #c31432;
-	background: linear-gradient(-45deg, #240b36, #af1313);
+	background: radial-gradient(ellipse at top, green, rgb(0, 180, 180), rgb(197, 58, 197));
 	background-attachment: fixed;
 	background-size: 400% 400%;
-	animation: backgroundAnimation 10s infinite;
+	animation: backgroundAnimation 30s infinite;
 }
 
 @keyframes backgroundAnimation {

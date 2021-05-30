@@ -16,10 +16,10 @@ function ProjectPortal(props) {
 		<div className='portal'>
 			<span>{portalText}</span>
 			<div className='project-links'>
-				<a href={deployment} className='deployment'>
+				<a href={deployment} className='deployment' target='_blank'>
 					<i className='fas fa-pager'></i>
 				</a>
-				<a href={source} className='source'>
+				<a href={source} className='source' target='_blank'>
 					<i className='fas fa-file-code'></i>
 				</a>
 			</div>

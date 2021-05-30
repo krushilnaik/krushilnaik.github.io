@@ -25,7 +25,6 @@ function App() {
 				<ContactForm />
 			</main>
 
-			{/* Add scroll to top button fixed on the bottom right */}
 			<ScrollToTop />
 		</PageContext.Provider>
 	);

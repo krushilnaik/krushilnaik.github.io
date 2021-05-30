@@ -3,23 +3,10 @@ import gsap from 'gsap';
 import React, { useContext, useRef, useState } from 'react';
 import InView from 'react-intersection-observer';
 import { PageContext } from '../utils/js/contexts';
-import { randomFrom } from '../utils/js/functions';
 import Airplane from './Airplane';
 import Links from './Links';
 
 import './scss/ContactForm.scss';
-
-const submitButtonOptions = [
-	'Send carrier pigeon',
-	'Upload node_modules',
-	'Text your crush (me)',
-	'Poke my shoulder',
-	'Form blood-pact',
-	'Tell me about it',
-	"Let's taco bout it"
-];
-
-const buttonText = randomFrom(submitButtonOptions);
 
 function ContactForm() {
 	const [name, setName] = useState('');
@@ -179,7 +166,7 @@ function ContactForm() {
 				</div>
 
 				<button type='submit' onClick={handleFormSubmit}>
-					{buttonText}
+					Submit
 				</button>
 			</form>
 

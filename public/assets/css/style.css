@@ -25,7 +25,7 @@ body {
 	width: 100%;
 
 	background: #c31432;
-	background: linear-gradient(-45deg, #240b36, #af1313);
+	background: linear-gradient(-45deg, green, rgb(0, 180, 180), purple);
 	background-attachment: fixed;
 	background-size: 400% 400%;
 	animation: backgroundAnimation 10s infinite;

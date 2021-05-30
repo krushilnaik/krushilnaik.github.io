@@ -16,6 +16,9 @@ $icon-size: 30px;
 	flex-direction: row;
 	gap: 15px;
 
+	position: relative;
+	z-index: 90000;
+
 	border-radius: 15px;
 	background-color: crimson;
 	width: fit-content;

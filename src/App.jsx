@@ -3,6 +3,7 @@ import AboutMe from './components/AboutMe';
 import ContactForm from './components/ContactForm';
 import Intro from './components/Intro';
 import NavBar from './components/NavBar';
+import ScrollToTop from './components/ScrollToTop';
 import SkillSet from './components/SkillSet';
 
 import './scss/App.scss';
@@ -25,6 +26,7 @@ function App() {
 			</main>
 
 			{/* Add scroll to top button fixed on the bottom right */}
+			<ScrollToTop />
 		</PageContext.Provider>
 	);
 }

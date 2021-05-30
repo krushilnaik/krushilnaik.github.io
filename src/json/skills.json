@@ -38,7 +38,12 @@
 		"group": "Frameworks/Technologies",
 		"skills": [
 			{
-				"skill": "ReactJS (w/ Redux)",
+				"skill": "React",
+				"deployedSite": "",
+				"sourceCode": ""
+			},
+			{
+				"skill": "Redux",
 				"deployedSite": "https://would-you-redux.netlify.app/",
 				"sourceCode": "https://github.com/krushilnaik/Would-You-Redux"
 			},

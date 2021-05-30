@@ -36,12 +36,14 @@
 
 			ul {
 				justify-self: flex-start;
+				width: fit-content;
 
 				li {
 					font-size: 20px;
 					list-style-position: inside;
 					list-style-type: none;
 					margin-bottom: 5px;
+					width: fit-content;
 				}
 			}
 		}

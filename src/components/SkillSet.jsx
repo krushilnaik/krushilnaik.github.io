@@ -6,6 +6,7 @@ import { slugify } from '../utils/js/functions';
 import InView from 'react-intersection-observer';
 import { PageContext } from '../utils/js/contexts';
 import ScrollAnimation from 'react-animate-on-scroll';
+import ProjectPortal from './ProjectPortal';
 
 function SkillSet() {
 	const { setActivePage } = useContext(PageContext);
@@ -37,13 +38,19 @@ function SkillSet() {
 							{/* Plan to have each of these link both a deployed site using that technology */}
 							{/* or the GitHub repo behind the deployed site. Site viewer's choice */}
 							{skillGroup.skills.map((skill, j) => (
-								<li key={slugify(skill)}>
+								<li key={slugify(skill.skill)}>
 									<ScrollAnimation
 										animateIn='fadeInUp'
 										animateOnce={true}
 										delay={j * (500 / skillGroup.skills.length) + 100}
 									>
-										{skill}
+										{
+											<ProjectPortal
+												deployment={skill.deployedSite}
+												portalText={skill.skill}
+												source={skill.sourceCode}
+											/>
+										}
 									</ScrollAnimation>
 								</li>
 							))}

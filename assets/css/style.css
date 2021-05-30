@@ -2,6 +2,10 @@
 
 html {
 	scroll-behavior: smooth;
+
+	/* Firefox scrollbar fix */
+	scrollbar-color: transparent transparent;
+	scrollbar-width: none;
 }
 
 * {
@@ -40,17 +44,7 @@ body {
 }
 
 /* Customize scroll bar */
-/* won't work on Firefox */
 ::-webkit-scrollbar {
 	display: none;
 	width: 0.5em;
-}
-
-::-webkit-scrollbar-track {
-	box-shadow: inset 0 0 5px rgb(82, 136, 138);
-	background-color: #0f2027;
-}
-
-::-webkit-scrollbar-thumb {
-	background: cadetblue;
 }

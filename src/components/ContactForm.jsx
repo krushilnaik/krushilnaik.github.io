@@ -1,4 +1,4 @@
-import emailjs from 'emailjs-com';
+// import emailjs from 'emailjs-com';
 import gsap from 'gsap';
 import React, { useContext, useRef, useState } from 'react';
 import InView from 'react-intersection-observer';
@@ -15,16 +15,17 @@ const submitButtonOptions = [
 	'Text your crush (me)',
 	'Poke my shoulder',
 	'Form blood-pact',
-	'Tell me about it'
+	'Tell me about it',
+	"Let's taco bout it"
 ];
+
+const buttonText = randomFrom(submitButtonOptions);
 
 function ContactForm() {
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [message, setMessage] = useState('');
 	const { setActivePage } = useContext(PageContext);
-
-	const buttonText = randomFrom(submitButtonOptions);
 
 	/**
 	 * @type {React.MutableRefObject<HTMLFormElement>}
@@ -124,12 +125,12 @@ function ContactForm() {
 			});
 		}
 
-		emailjs.send(
-			'krushil_gmail',
-			'dotdev',
-			{ name, email, message },
-			'user_xw0CXtf9Bu7mFYEIRWArv'
-		);
+		// emailjs.send(
+		// 	'krushil_gmail',
+		// 	'dotdev',
+		// 	{ name, email, message },
+		// 	'user_xw0CXtf9Bu7mFYEIRWArv'
+		// );
 	};
 
 	return (

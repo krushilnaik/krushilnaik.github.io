@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import AboutMe from './components/AboutMe';
-import ContactForm from './components/ContactForm';
-import Intro from './components/Intro';
+import AboutMe from './pages/AboutMe';
+import ContactForm from './pages/ContactForm';
+import Intro from './pages/Intro';
 import NavBar from './components/NavBar';
 import ScrollToTop from './components/ScrollToTop';
-import SkillSet from './components/SkillSet';
+import SkillSet from './pages/SkillSet';
 
 import './scss/App.scss';
 import { PageContext } from './utils/js/contexts';

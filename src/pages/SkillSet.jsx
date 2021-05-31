@@ -6,7 +6,7 @@ import { slugify } from '../utils/js/functions';
 import InView from 'react-intersection-observer';
 import { PageContext } from '../utils/js/contexts';
 import ScrollAnimation from 'react-animate-on-scroll';
-import ProjectPortal from './ProjectPortal';
+import ProjectPortal from '../components/ProjectPortal';
 
 function SkillSet() {
 	const { setActivePage } = useContext(PageContext);

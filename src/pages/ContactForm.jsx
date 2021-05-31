@@ -3,8 +3,8 @@ import gsap from 'gsap';
 import React, { useContext, useRef, useState } from 'react';
 import InView from 'react-intersection-observer';
 import { PageContext } from '../utils/js/contexts';
-import Airplane from './Airplane';
-import Links from './Links';
+import Airplane from '../components/Airplane';
+import Links from '../components/Links';
 
 import './scss/ContactForm.scss';
 

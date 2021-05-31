@@ -1,3 +1,4 @@
+import anime from 'animejs';
 import React, { useEffect, useRef } from 'react';
 import { PageContext } from '../utils/js/contexts';
 import { slugify } from '../utils/js/functions';
@@ -11,6 +12,14 @@ function NavBar() {
 
 	useEffect(() => {
 		navRef.current = [];
+
+		anime({
+			targets: 'nav ul li',
+			opacity: [0, 1],
+			translateX: [-150, 0],
+			easing: 'easeOutCubic',
+			delay: anime.stagger(150, { direction: 'reverse' })
+		});
 
 		/**
 		 * all the anchor tags rendered to the nav bar

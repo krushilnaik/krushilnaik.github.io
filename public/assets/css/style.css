@@ -31,7 +31,7 @@ body {
 	background: radial-gradient(
 		ellipse at top,
 		rgba(0, 128, 0, 0.881),
-		rgba(0, 180, 180, 0.883),
+		rgba(100, 148, 237, 0.883),
 		rgba(197, 58, 197, 0.887)
 	);
 	background-attachment: fixed;

@@ -4,6 +4,7 @@
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
+		"animejs": "^3.2.1",
 		"emailjs-com": "^2.6.4",
 		"gsap": "^3.6.1",
 		"react": "^17.0.2",

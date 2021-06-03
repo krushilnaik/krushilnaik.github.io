@@ -30,9 +30,9 @@ body {
 	background: #c31432;
 	background: radial-gradient(
 		ellipse at top,
-		rgba(0, 128, 0, 0.881),
-		rgba(100, 148, 237, 0.883),
-		rgba(197, 58, 197, 0.887)
+		rgba(0, 128, 0, 0.931),
+		rgba(100, 148, 237, 0.933),
+		rgba(197, 58, 197, 0.937)
 	);
 	background-attachment: fixed;
 	background-size: 400% 400%;

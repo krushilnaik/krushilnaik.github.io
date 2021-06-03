@@ -3,6 +3,9 @@ import { PageContext } from '../utils/js/contexts';
 
 import './scss/ScrollToTop.scss';
 
+/**
+ * - TODO: bottom-center cheveron will double as ScrollToTop
+ */
 function ScrollToTop() {
 	return (
 		<PageContext.Consumer>

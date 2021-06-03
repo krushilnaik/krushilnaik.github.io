@@ -3,6 +3,7 @@ import React from 'react';
 import './scss/ProjectPortal.scss';
 
 /**
+ * - TODO: add icon jittering if there's no project using that skill on GitHub
  * @param {{
  * 	deployment: string,
  * 	source: string,

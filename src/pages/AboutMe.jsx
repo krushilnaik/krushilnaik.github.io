@@ -4,6 +4,9 @@ import { PageContext } from '../utils/js/contexts';
 
 import './scss/AboutMe.scss';
 
+/**
+ * - TODO: everything
+ */
 function AboutMe() {
 	const { setActivePage } = useContext(PageContext);
 

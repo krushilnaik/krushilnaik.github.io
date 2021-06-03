@@ -1,17 +1,15 @@
 // import emailjs from 'emailjs-com';
 import gsap from 'gsap';
-import React, { useContext, useRef, useState } from 'react';
+import React, { useContext, useRef } from 'react';
 import InView from 'react-intersection-observer';
 import { PageContext } from '../utils/js/contexts';
 import Airplane from '../components/Airplane';
+import Input from '../components/Input';
 import Links from '../components/Links';
 
 import './scss/ContactForm.scss';
 
 function ContactForm() {
-	const [name, setName] = useState('');
-	const [email, setEmail] = useState('');
-	const [message, setMessage] = useState('');
 	const { setActivePage } = useContext(PageContext);
 
 	/**
@@ -21,6 +19,7 @@ function ContactForm() {
 
 	/**
 	 * Send out the email
+	 * - TODO: don't submit form if any fields aren't filled out
 	 * @param {React.SyntheticEvent<HTMLButtonElement>} event
 	 */
 	const handleFormSubmit = async event => {
@@ -133,36 +132,9 @@ function ContactForm() {
 
 				<Airplane />
 
-				<div id='name-field' className='input-wrapper'>
-					<input
-						type='text'
-						name='name'
-						placeholder='Name:'
-						defaultValue={name}
-						onChange={event => setName(event.currentTarget.value)}
-					/>
-				</div>
-
-				<div id='email-field' className='input-wrapper'>
-					<input
-						type='email'
-						name='email'
-						placeholder='Email:'
-						defaultValue={email}
-						onChange={event => setEmail(event.currentTarget.value)}
-					/>
-				</div>
-
-				<div id='message-field' className='input-wrapper'>
-					<textarea
-						name='message'
-						cols={30}
-						rows={10}
-						placeholder='Message:'
-						defaultValue={message}
-						onChange={event => setMessage(event.currentTarget.value)}
-					/>
-				</div>
+				<Input id='name-field' placeholder='Name:' />
+				<Input id='email-field' placeholder='Email:' />
+				<Input type='textarea' id='message-field' placeholder='Message:' />
 
 				<button type='submit' onClick={handleFormSubmit}>
 					Submit

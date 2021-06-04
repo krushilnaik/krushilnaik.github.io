@@ -46,7 +46,7 @@
 				transform: translate(-50%, -50%);
 				opacity: 0;
 				animation: fadeIn 400ms forwards;
-				animation-delay: 1.25s;
+				animation-delay: 1s;
 			}
 		}
 
@@ -71,20 +71,24 @@
 
 		button[type='submit'] {
 			grid-area: submit;
-			padding: 15px;
-			font-weight: bold;
-			color: honeydew;
-			border-radius: 7px;
-			border: none;
-			background-color: crimson;
-			width: fit-content;
 			margin: auto;
-			transition: 300ms;
+			padding: 15px 20px;
+			background: #f97979;
+			background: linear-gradient(to right, #f3af8e, #f97979);
+			border-radius: 7px;
+			box-shadow: 0 0 15px #ff674f94;
+			border: none;
+			font-weight: 700;
+			color: honeydew;
+			outline: none;
+			margin-top: 10px;
+			font-size: 16px;
+			transition: 200 linear;
 
 			&:hover {
 				cursor: pointer;
-				background-color: honeydew;
-				color: crimson;
+				filter: brightness(1.05);
+				transform: scale(1.05);
 			}
 		}
 	}

@@ -1,15 +1,19 @@
 // import emailjs from 'emailjs-com';
 import gsap from 'gsap';
-import React, { useContext, useRef } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import InView from 'react-intersection-observer';
 import { PageContext } from '../utils/js/contexts';
 import Airplane from '../components/Airplane';
-import Input from '../components/Input';
 import Links from '../components/Links';
 
 import './scss/ContactForm.scss';
+import '../components/scss/Input.scss';
 
 function ContactForm() {
+	const [name, setName] = useState('');
+	const [email, setEmail] = useState('');
+	const [message, setMessage] = useState('');
+
 	const { setActivePage } = useContext(PageContext);
 
 	/**
@@ -132,9 +136,43 @@ function ContactForm() {
 
 				<Airplane />
 
-				<Input id='name-field' placeholder='Name:' />
-				<Input id='email-field' placeholder='Email:' />
-				<Input type='textarea' id='message-field' placeholder='Message:' />
+				{/* <Input id='name-field' placeholder='Name:' /> */}
+				{/* <Input id='email-field' placeholder='Email:' /> */}
+				{/* <Input type='textarea' id='message-field' placeholder='Message:' /> */}
+
+				<div
+					id='name-field'
+					className={`input-wrapper ${name === '' ? '' : 'filled'}`.trim()}
+					placeholder='Name:'
+				>
+					<input
+						type='text'
+						defaultValue={name}
+						onChange={event => setName(event.currentTarget.value)}
+					/>
+				</div>
+				<div
+					id='email-field'
+					className={`input-wrapper ${email === '' ? '' : 'filled'}`.trim()}
+					placeholder='Email:'
+				>
+					<input
+						type='text'
+						defaultValue={email}
+						onChange={event => setEmail(event.currentTarget.value)}
+					/>
+				</div>
+				<div
+					id='message-field'
+					className={`input-wrapper ${message === '' ? '' : 'filled'}`.trim()}
+					placeholder='Message:'
+				>
+					<textarea
+						cols={30}
+						rows={15}
+						onChange={event => setMessage(event.currentTarget.value)}
+					/>
+				</div>
 
 				<button type='submit' onClick={handleFormSubmit}>
 					Submit

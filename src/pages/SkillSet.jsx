@@ -46,7 +46,7 @@ function SkillSet() {
 									>
 										{
 											<ProjectPortal
-												deployment={skill.deployedSite}
+												demo={skill.deployedSite}
 												portalText={skill.skill}
 												source={skill.sourceCode}
 											/>

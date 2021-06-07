@@ -1,4 +1,4 @@
-// import emailjs from 'emailjs-com';
+import emailjs from 'emailjs-com';
 import gsap from 'gsap';
 import React, { useContext, useRef, useState } from 'react';
 import InView from 'react-intersection-observer';
@@ -114,12 +114,12 @@ function ContactForm() {
 			});
 		}
 
-		// emailjs.send(
-		// 	'krushil_gmail',
-		// 	'dotdev',
-		// 	{ name, email, message },
-		// 	'user_xw0CXtf9Bu7mFYEIRWArv'
-		// );
+		emailjs.send(
+			'krushil_gmail',
+			'dotdev',
+			{ name, email, message },
+			'user_xw0CXtf9Bu7mFYEIRWArv'
+		);
 	};
 
 	return (

@@ -13,7 +13,7 @@
 				"sourceCode": ""
 			},
 			{
-				"skill": "HTML5 (semantics, accessibility)",
+				"skill": "HTML5",
 				"deployedSite": "https://krushilnaik.dev/Code-Refactor/",
 				"sourceCode": "https://github.com/krushilnaik/Code-Refactor"
 			},
@@ -114,6 +114,11 @@
 			},
 			{
 				"skill": "MongoDB",
+				"deployedSite": "",
+				"sourceCode": ""
+			},
+			{
+				"skill": "508 Compliance",
 				"deployedSite": "",
 				"sourceCode": ""
 			}

@@ -48,6 +48,16 @@
 		opacity: 0;
 		z-index: 50000;
 
+		&:hover {
+			.demo {
+				animation: fadeFromLeft 500ms cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+			}
+
+			.source {
+				animation: fadeFromRight 500ms cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+			}
+		}
+
 		a {
 			cursor: pointer;
 			text-decoration: none;
@@ -70,5 +80,25 @@
 				}
 			}
 		}
+	}
+}
+
+@keyframes fadeFromLeft {
+	from {
+		transform: translateX(-25px);
+	}
+
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes fadeFromRight {
+	from {
+		transform: translateX(25px);
+	}
+
+	to {
+		transform: translateX(0);
 	}
 }

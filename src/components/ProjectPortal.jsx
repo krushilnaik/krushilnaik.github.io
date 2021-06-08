@@ -18,10 +18,15 @@ function ProjectPortal(props) {
 			<span>{portalText}</span>
 			<div className='project-links'>
 				<a href={demo} className='demo' rel='noreferrer' target='_blank'>
-					<i className='fas fa-pager' data-tooltip='Live Preview'></i>
+					<div className='icon-wrapper' data-tooltip='Live Preview'>
+						<i className='fas fa-pager'></i>
+					</div>
 				</a>
+
 				<a href={source} className='source' rel='noreferrer' target='_blank'>
-					<i className='fas fa-file-code' data-tooltip='Source Code'></i>
+					<div className='icon-wrapper' data-tooltip='Source Code'>
+						<i className='fas fa-file-code'></i>
+					</div>
 				</a>
 			</div>
 		</div>

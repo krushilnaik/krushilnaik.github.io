@@ -15,20 +15,24 @@ function ProjectPortal(props) {
 
 	return (
 		<div className='portal'>
-			<span>{portalText}</span>
-			<div className='project-links'>
-				<a href={demo} className='demo' rel='noreferrer' target='_blank'>
-					<div className='icon-wrapper' data-tooltip='Live Preview'>
-						<i className='fas fa-pager'></i>
-					</div>
-				</a>
+			<span className='label'>{portalText}</span>
+			{demo && source ? (
+				<div className='project-links'>
+					<a href={demo} className='demo' rel='noreferrer' target='_blank'>
+						<div className='icon-wrapper' data-tooltip='Live Preview'>
+							<i className='fas fa-pager'></i>
+						</div>
+					</a>
 
-				<a href={source} className='source' rel='noreferrer' target='_blank'>
-					<div className='icon-wrapper' data-tooltip='Source Code'>
-						<i className='fas fa-file-code'></i>
-					</div>
-				</a>
-			</div>
+					<a href={source} className='source' rel='noreferrer' target='_blank'>
+						<div className='icon-wrapper' data-tooltip='Source Code'>
+							<i className='fas fa-file-code'></i>
+						</div>
+					</a>
+				</div>
+			) : (
+				<span className='no-link'>No Links found</span>
+			)}
 		</div>
 	);
 }

@@ -5,14 +5,26 @@
 	box-sizing: content-box;
 	margin-bottom: 12px;
 	align-items: center;
+	height: 29px;
 
-	span {
+	.label {
 		position: absolute;
 		font-size: 25px;
 		width: max-content;
 		transition: all 350ms;
 		transform: translate(0, 0);
 		left: 0;
+	}
+
+	.no-link {
+		font-size: 16px;
+		letter-spacing: 5px;
+		transition: all 200ms;
+		position: absolute;
+		width: max-content;
+		left: 50%;
+		transform: translateX(-50%);
+		opacity: 0;
 	}
 
 	&::after {
@@ -33,7 +45,7 @@
 			width: 100%;
 		}
 
-		span {
+		.label {
 			font-size: 12px;
 			left: 50%;
 			transform: translate(-50%, -100%);
@@ -43,11 +55,23 @@
 		.project-links {
 			opacity: 1;
 		}
+
+		.no-link {
+			letter-spacing: normal;
+			opacity: 1;
+		}
 	}
 
 	> * {
 		grid-column: 1;
 		grid-row: 1;
+	}
+
+	.no-links {
+		padding: 3px;
+		opacity: 0;
+		z-index: 50000;
+		transition: all 200ms;
 	}
 
 	.project-links {

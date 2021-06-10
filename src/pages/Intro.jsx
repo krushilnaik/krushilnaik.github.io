@@ -16,7 +16,15 @@ function Intro() {
 				inView && setActivePage('Intro');
 			}}
 		>
-			<h2>Scroll down to start, or use the nav bar up top to skip ahead</h2>
+			<div className='identity'>
+				<span className='im'>I'm</span>
+				<div id='what-i-am'>
+					<div className='i-am'>a developer</div>
+					<div className='i-am'>a tech enthausiast</div>
+					<div className='i-am'>an anime fan</div>
+					<div className='i-am'>a lifelong learner</div>
+				</div>
+			</div>
 			<i className='fas fa-chevron-down'></i>
 		</InView>
 	);

@@ -39,8 +39,8 @@
 		"skills": [
 			{
 				"skill": "React",
-				"deployedSite": "",
-				"sourceCode": ""
+				"deployedSite": "https://kn-myreads.netlify.app/",
+				"sourceCode": "https://github.com/krushilnaik/MyReads"
 			},
 			{
 				"skill": "Redux",
@@ -94,8 +94,8 @@
 		"skills": [
 			{
 				"skill": "Netlify",
-				"deployedSite": "",
-				"sourceCode": ""
+				"deployedSite": "https://acupunctureherbcenter.netlify.app/",
+				"sourceCode": "https://github.com/krushilnaik/Acupuncture-Herb-Center"
 			},
 			{
 				"skill": "Webpack",

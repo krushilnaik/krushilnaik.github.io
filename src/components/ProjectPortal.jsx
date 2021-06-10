@@ -1,4 +1,5 @@
 import React from 'react';
+import JitterIcon from './JitterIcon';
 
 import './scss/ProjectPortal.scss';
 
@@ -12,23 +13,15 @@ import './scss/ProjectPortal.scss';
  */
 function ProjectPortal(props) {
 	const { demo, source, portalText } = props;
+	console.log(`making Portal for ${portalText} with ${demo}, ${source}`);
 
 	return (
 		<div className='portal'>
 			<span className='label'>{portalText}</span>
-			{demo && source ? (
+			{demo || source ? (
 				<div className='project-links'>
-					<a href={demo} className='demo' rel='noreferrer' target='_blank'>
-						<div className='icon-wrapper' data-tooltip='Live Preview'>
-							<i className='fas fa-pager'></i>
-						</div>
-					</a>
-
-					<a href={source} className='source' rel='noreferrer' target='_blank'>
-						<div className='icon-wrapper' data-tooltip='Source Code'>
-							<i className='fas fa-file-code'></i>
-						</div>
-					</a>
+					<JitterIcon href={demo} type='demo' />
+					<JitterIcon href={source} type='source' />
 				</div>
 			) : (
 				<span className='no-link'>No Links found</span>

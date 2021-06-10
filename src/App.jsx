@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import AboutMe from './pages/AboutMe';
 import ContactForm from './pages/ContactForm';
+import NameTag from './components/NameTag';
 import Intro from './pages/Intro';
 import NavBar from './components/NavBar';
 import ScrollToTop from './components/ScrollToTop';
@@ -15,6 +16,7 @@ function App() {
 	return (
 		<PageContext.Provider value={{ activePage, setActivePage }}>
 			<header>
+				<NameTag />
 				<NavBar />
 			</header>
 

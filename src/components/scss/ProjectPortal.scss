@@ -17,7 +17,7 @@
 	}
 
 	.no-link {
-		font-size: 16px;
+		font-size: 17px;
 		letter-spacing: 5px;
 		transition: all 200ms;
 		position: absolute;
@@ -25,6 +25,7 @@
 		left: 50%;
 		transform: translateX(-50%);
 		opacity: 0;
+		user-select: none;
 	}
 
 	&::after {

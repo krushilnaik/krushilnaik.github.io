@@ -19,16 +19,24 @@ html {
 body {
 	width: 100vw;
 	max-width: 100%;
+	background-image: url(../images/background.png);
+	background-attachment: fixed;
+	background-size: 50% 50%;
 }
 
 #root {
 	width: 100%;
 
 	background: #c31432;
-	background: radial-gradient(ellipse at top, green, rgb(0, 180, 180), rgb(197, 58, 197));
+	background: radial-gradient(
+		ellipse at top,
+		rgba(0, 128, 0, 0.931),
+		rgba(100, 148, 237, 0.933),
+		rgba(197, 58, 197, 0.937)
+	);
 	background-attachment: fixed;
 	background-size: 400% 400%;
-	animation: backgroundAnimation 30s infinite;
+	animation: backgroundAnimation 25s infinite;
 }
 
 @keyframes backgroundAnimation {

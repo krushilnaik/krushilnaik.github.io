@@ -16,6 +16,8 @@ function ContactForm() {
 
 	const { setActivePage } = useContext(PageContext);
 
+	const errorColor = 'tomato';
+
 	/**
 	 * @type {React.MutableRefObject<HTMLFormElement>}
 	 */
@@ -28,6 +30,11 @@ function ContactForm() {
 	 */
 	const handleFormSubmit = async event => {
 		event.preventDefault();
+
+		if ([name, email, message].includes('')) {
+			alert('Please fill out all fields');
+			return;
+		}
 
 		let { current: form } = formRef;
 		let plane = form.querySelector('.airplane');
@@ -170,10 +177,12 @@ function ContactForm() {
 				<div
 					id='name-field'
 					className={`input-wrapper ${name === '' ? '' : 'filled'}`.trim()}
-					placeholder='Name:'
+					placeholder={`Name:${name ? '' : '*'}`}
+					style={{ color: name ? 'honeydew' : errorColor }}
 				>
 					<input
 						type='text'
+						required={true}
 						defaultValue={name}
 						onChange={event => setName(event.currentTarget.value)}
 					/>
@@ -181,10 +190,12 @@ function ContactForm() {
 				<div
 					id='email-field'
 					className={`input-wrapper ${email === '' ? '' : 'filled'}`.trim()}
-					placeholder='Email:'
+					placeholder={`Email:${email ? '' : '*'}`}
+					style={{ color: email ? 'honeydew' : errorColor }}
 				>
 					<input
 						type='text'
+						required={true}
 						defaultValue={email}
 						onChange={event => setEmail(event.currentTarget.value)}
 					/>
@@ -192,11 +203,13 @@ function ContactForm() {
 				<div
 					id='message-field'
 					className={`input-wrapper ${message === '' ? '' : 'filled'}`.trim()}
-					placeholder='Message:'
+					placeholder={`Message:${message ? '' : '*'}`}
+					style={{ color: message ? 'honeydew' : errorColor }}
 				>
 					<textarea
 						cols={30}
 						rows={15}
+						required={true}
 						onChange={event => setMessage(event.currentTarget.value)}
 					/>
 				</div>

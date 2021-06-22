@@ -3,7 +3,8 @@
 	transition: opacity 300ms;
 	opacity: 1;
 
-	&.filled {
+	&.filled,
+	&:focus-within {
 		&::before {
 			transform: scale(0.7);
 			top: -0.1em;
@@ -42,9 +43,10 @@
 		top: 1em;
 		left: 0.25em;
 		font-size: 20px;
-		color: honeydew;
-		opacity: 0.8;
+		color: inherit;
+		// opacity: 0.8;
 		transition: all 150ms;
+		z-index: -1;
 	}
 
 	&::after {

@@ -8,6 +8,9 @@ import { PageContext } from '../utils/js/contexts';
 import ScrollAnimation from 'react-animate-on-scroll';
 import ProjectPortal from '../components/ProjectPortal';
 
+/**
+ * - TODO: make skill columns scrollable to avoid crowding page
+ */
 function SkillSet() {
 	const { setActivePage } = useContext(PageContext);
 

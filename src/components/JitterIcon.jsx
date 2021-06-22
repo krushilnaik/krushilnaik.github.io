@@ -12,7 +12,7 @@ import './scss/JitterIcon.scss';
 function JitterIcon(props) {
 	const { href, type } = props;
 	const isDemo = type === 'demo';
-	const tooltip = isDemo ? 'Live Preview' : 'Source Code';
+	const tooltip = isDemo ? 'Demo' : 'Source Code';
 
 	console.log(`Making JitterIcon linked to ${href}`);
 
@@ -25,7 +25,7 @@ function JitterIcon(props) {
 	});
 
 	return (
-		<a href={href} className={isDemo ? 'demo' : 'source'} rel='noreferrer' target='_blank'>
+		<a href={href} className={isDemo ? 'demo' : 'source'} rel='noreferrer' target='blank'>
 			<div className='icon-wrapper' data-tooltip={href ? tooltip : `No ${tooltip} available`}>
 				<i
 					// id={`${href.slice(-5)}-${type}-icon`}

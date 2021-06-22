@@ -134,6 +134,9 @@ function ContactForm() {
 			<form ref={formRef}>
 				<div className='contact-info'>
 					<h4>Contact Info</h4>
+
+					<img className='avatar' src='assets/images/avatar.png' alt='crucial avatar' />
+
 					<ul>
 						<li>
 							{/* GPS icon */}

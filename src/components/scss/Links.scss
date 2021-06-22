@@ -20,7 +20,6 @@ $icon-size: 30px;
 	z-index: 90000;
 
 	border-radius: 15px;
-	background-color: crimson;
 	width: fit-content;
 
 	a {
@@ -40,19 +39,21 @@ $icon-size: 30px;
 		}
 
 		&#github:hover {
-			color: black;
+			i {
+				color: black;
+			}
 		}
 
 		&#linkedin:hover {
-			color: dodgerblue;
+			i {
+				color: dodgerblue;
+			}
 		}
 
 		&#twitter:hover {
-			color: cornflowerblue;
-		}
-
-		&#email:hover {
-			color: brown;
+			i {
+				color: cornflowerblue;
+			}
 		}
 	}
 }

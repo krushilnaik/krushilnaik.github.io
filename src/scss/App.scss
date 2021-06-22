@@ -13,10 +13,12 @@ main {
 	height: 100%;
 
 	display: grid;
-	grid-auto-rows: calc(100vh - 30px);
-	row-gap: 15px;
 
 	> section {
+		width: 100vw;
+		height: 100vh;
 		padding: 15px;
+
+		display: grid;
 	}
 }

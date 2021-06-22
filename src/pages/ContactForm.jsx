@@ -132,6 +132,30 @@ function ContactForm() {
 			}}
 		>
 			<form ref={formRef}>
+				<div className='contact-info'>
+					<h4>Contact Info</h4>
+					<ul>
+						<li>
+							{/* GPS icon */}
+							<i className='fas fa-map-marker-alt'></i>
+							<span>New Jersey, USA</span>
+						</li>
+						<li>
+							{/* Email icon */}
+							<i className='fas fa-envelope'></i>
+							<a href='mailto:krushilnaik96@gmail.com'>krushilnaik96@gmail.com</a>
+						</li>
+						<li>
+							{/* Some other third one */}
+							<i className='fas fa-file'></i>
+							<a href='assets/docs/krushilNaikResume.docx' download>
+								Resume
+							</a>
+						</li>
+					</ul>
+					<Links />
+				</div>
+
 				<h3>Caught your attention?</h3>
 
 				<Airplane />
@@ -178,8 +202,6 @@ function ContactForm() {
 					Submit
 				</button>
 			</form>
-
-			<Links />
 		</InView>
 	);
 }

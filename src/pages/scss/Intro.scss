@@ -7,8 +7,8 @@ $wordCount: 4;
 	display: grid;
 
 	justify-content: center;
-	align-content: stretch;
-	align-items: flex-end;
+	// align-content: stretch;
+	align-items: center;
 	color: honeydew;
 
 	.identity {
@@ -56,7 +56,7 @@ $wordCount: 4;
 		font-size: 60px;
 		color: rgba($color: honeydew, $alpha: 0.5);
 
-		animation: hoverDown 1.5s infinite;
+		// animation: hoverDown 1.5s infinite;
 	}
 }
 

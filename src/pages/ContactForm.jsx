@@ -25,12 +25,14 @@ function ContactForm() {
 
 	/**
 	 * Send out the email
-	 * - TODO: don't submit form if any fields aren't filled out
 	 * @param {React.SyntheticEvent<HTMLButtonElement>} event
 	 */
 	const handleFormSubmit = async event => {
 		event.preventDefault();
 
+		/**
+		 * - TODO: replace this check with jitter animation from ProjectPortal
+		 */
 		if ([name, email, message].includes('')) {
 			alert('Please fill out all fields');
 			return;

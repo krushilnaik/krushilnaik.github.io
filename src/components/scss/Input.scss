@@ -60,10 +60,24 @@
 		left: 0;
 	}
 
+	&.invalid::before {
+		animation: jitter 150ms infinite;
+	}
+
 	&:hover,
 	&:focus-within {
 		&::after {
 			width: 100%;
 		}
+	}
+}
+
+@keyframes jitter {
+	from {
+		transform: translateX(-5px);
+	}
+
+	to {
+		transform: translateX(5px);
 	}
 }

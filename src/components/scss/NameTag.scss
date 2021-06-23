@@ -1,8 +1,8 @@
 .header-wrapper {
-	filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.61));
+	filter: drop-shadow(0 0 3px rgba($color: black, $alpha: 0.5));
 
 	h1 {
-		font-size: 40px;
+		font-size: 36px;
 		text-align: center;
 		color: #993333;
 		background: linear-gradient(45deg, #ec7979 0%, #d16e6e 100%);

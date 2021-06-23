@@ -9,6 +9,8 @@ import Links from '../components/Links';
 import './scss/ContactForm.scss';
 import '../components/scss/Input.scss';
 
+const errorColor = 'tomato';
+
 function ContactForm() {
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
@@ -16,9 +18,32 @@ function ContactForm() {
 
 	const { setActivePage } = useContext(PageContext);
 
-	const errorColor = 'tomato';
+	/**
+	 * Reference to name field's wrapper div
+	 * @type {React.MutableRefObject<HTMLDivElement>}
+	 */
+	const nameRef = useRef(null);
 
 	/**
+	 * Reference to email field's wrapper div
+	 * @type {React.MutableRefObject<HTMLDivElement>}
+	 */
+	const emailRef = useRef(null);
+
+	/**
+	 * Reference to message field's wrapper div
+	 * @type {React.MutableRefObject<HTMLDivElement>}
+	 */
+	const messageRef = useRef(null);
+
+	/**
+	 * Reference to forms's submit button
+	 * @type {React.MutableRefObject<HTMLButtonElement>}
+	 */
+	const submitRef = useRef(null);
+
+	/**
+	 * Reference to form element
 	 * @type {React.MutableRefObject<HTMLFormElement>}
 	 */
 	const formRef = useRef(null);
@@ -30,11 +55,34 @@ function ContactForm() {
 	const handleFormSubmit = async event => {
 		event.preventDefault();
 
-		/**
-		 * - TODO: replace this check with jitter animation from ProjectPortal
-		 */
-		if ([name, email, message].includes('')) {
-			alert('Please fill out all fields');
+		let formInvalid = false;
+
+		if (!name) {
+			formInvalid = true;
+			nameRef.current.classList.add('invalid');
+			submitRef.current.classList.add('invalid');
+		}
+
+		if (!email) {
+			formInvalid = true;
+			emailRef.current.classList.add('invalid');
+			submitRef.current.classList.add('invalid');
+		}
+
+		if (!message) {
+			formInvalid = true;
+			messageRef.current.classList.add('invalid');
+			submitRef.current.classList.add('invalid');
+		}
+
+		if (formInvalid) {
+			setTimeout(() => {
+				nameRef.current.classList.remove('invalid');
+				emailRef.current.classList.remove('invalid');
+				messageRef.current.classList.remove('invalid');
+				submitRef.current.classList.remove('invalid');
+			}, 450);
+
 			return;
 		}
 
@@ -142,7 +190,7 @@ function ContactForm() {
 		>
 			<form ref={formRef}>
 				<div className='contact-info'>
-					<h4>Contact Info</h4>
+					<h4>Find me on...</h4>
 
 					<img className='avatar' src='assets/images/avatar.png' alt='crucial avatar' />
 
@@ -168,7 +216,7 @@ function ContactForm() {
 					<Links />
 				</div>
 
-				<h3>Caught your attention?</h3>
+				<h3>...or leave a message here</h3>
 
 				<Airplane />
 
@@ -178,6 +226,7 @@ function ContactForm() {
 
 				<div
 					id='name-field'
+					ref={nameRef}
 					className={`input-wrapper ${name === '' ? '' : 'filled'}`.trim()}
 					placeholder={`Name:${name ? '' : '*'}`}
 					style={{ color: name ? 'honeydew' : errorColor }}
@@ -189,8 +238,10 @@ function ContactForm() {
 						onChange={event => setName(event.currentTarget.value)}
 					/>
 				</div>
+
 				<div
 					id='email-field'
+					ref={emailRef}
 					className={`input-wrapper ${email === '' ? '' : 'filled'}`.trim()}
 					placeholder={`Email:${email ? '' : '*'}`}
 					style={{ color: email ? 'honeydew' : errorColor }}
@@ -202,8 +253,10 @@ function ContactForm() {
 						onChange={event => setEmail(event.currentTarget.value)}
 					/>
 				</div>
+
 				<div
 					id='message-field'
+					ref={messageRef}
 					className={`input-wrapper ${message === '' ? '' : 'filled'}`.trim()}
 					placeholder={`Message:${message ? '' : '*'}`}
 					style={{ color: message ? 'honeydew' : errorColor }}
@@ -216,7 +269,7 @@ function ContactForm() {
 					/>
 				</div>
 
-				<button type='submit' onClick={handleFormSubmit}>
+				<button type='submit' onClick={handleFormSubmit} ref={submitRef}>
 					Submit
 				</button>
 			</form>

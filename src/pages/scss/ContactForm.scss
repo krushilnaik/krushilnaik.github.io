@@ -149,12 +149,14 @@
 
 		button[type='submit'] {
 			grid-area: submit;
+
+			position: relative;
 			margin: auto;
 			padding: 15px 20px;
 			background: #f97979;
-			background: linear-gradient(to right, #f3af8e, #f97979);
+			background: linear-gradient(to right, #8eb6f3, #798cf9);
 			border-radius: 7px;
-			box-shadow: 0 0 15px #ff674f94;
+			box-shadow: 0 0 15px #798cf994;
 			border: none;
 			font-weight: 700;
 			color: honeydew;
@@ -162,6 +164,23 @@
 			margin-top: 10px;
 			font-size: 16px;
 			transition: all 200ms;
+
+			&::after {
+				position: absolute;
+				font-weight: 100;
+				margin-left: 2em;
+				content: '(Please fill out all fields)';
+				color: lightcoral;
+				width: max-content;
+				transition: opacity 300ms;
+				opacity: 0;
+			}
+
+			&.invalid {
+				&::after {
+					opacity: 1;
+				}
+			}
 
 			&:hover {
 				cursor: pointer;

@@ -28,6 +28,7 @@
 				padding-top: 10px;
 				padding-left: 35px;
 				color: rgba($color: lightblue, $alpha: 0.5);
+				filter: drop-shadow(0 0 4px #444444d7);
 
 				.note {
 					font-size: 24px;
@@ -50,6 +51,8 @@
 		}
 
 		article {
+			display: grid;
+			place-content: center;
 			color: lightblue;
 			font-size: 35px;
 		}

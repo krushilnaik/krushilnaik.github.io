@@ -1,9 +1,13 @@
-h1 {
-	font-size: 40px;
-	text-align: center;
-	color: #993333;
-	background: linear-gradient(45deg, #ec7979 0%, #d16e6e 100%);
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+.header-wrapper {
+	filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.61));
+
+	h1 {
+		font-size: 40px;
+		text-align: center;
+		color: #993333;
+		background: linear-gradient(45deg, #ec7979 0%, #d16e6e 100%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
 }

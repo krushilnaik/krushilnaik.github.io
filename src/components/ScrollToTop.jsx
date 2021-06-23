@@ -12,10 +12,9 @@ function ScrollToTop() {
 			{({ activePage }) => (
 				<a
 					href='#intro'
-					className='scroll-to-top'
-					style={{ opacity: activePage === 'Intro' ? 0 : 1 }}
+					className={`scroll-to-top ${activePage !== 'Intro' ? 'minimized' : ''}`}
 				>
-					<i className='fas fa-caret-square-up'></i>
+					<i className='fas fa-chevron-down'></i>
 				</a>
 			)}
 		</PageContext.Consumer>

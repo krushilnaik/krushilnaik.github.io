@@ -25,7 +25,6 @@ function Intro() {
 					<div className='i-am'>a lifelong learner</div>
 				</div>
 			</div>
-			<i className='fas fa-chevron-down'></i>
 		</InView>
 	);
 }

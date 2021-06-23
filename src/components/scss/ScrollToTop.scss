@@ -1,18 +1,47 @@
 .scroll-to-top {
 	position: fixed;
-	right: 25px;
-	bottom: 25px;
 	background-color: transparent;
 	border: none;
 	transition: opacity 300ms;
+	right: 50%;
+	top: 90vh;
+	transition: all 400ms;
+	animation: hoverDown 1.5s infinite;
+
+	&.minimized {
+		top: 95vh;
+		right: 3%;
+		color: rgba($color: honeydew, $alpha: 0.6);
+		transform: rotate(0.5turn);
+		animation: none;
+
+		i {
+			font-size: 48px;
+		}
+	}
 
 	i {
-		font-size: 32px;
-		color: rgba($color: honeydew, $alpha: 0.6);
-		transition: color 250ms;
+		font-size: 70px;
+		opacity: 0.5;
+		position: absolute;
+		transform: rotate(0);
 
 		&:hover {
 			color: rgba($color: honeydew, $alpha: 0.8);
 		}
+	}
+}
+
+@keyframes hoverDown {
+	0% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-15px);
+	}
+
+	100% {
+		transform: translateY(0);
 	}
 }

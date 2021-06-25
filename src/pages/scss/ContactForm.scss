@@ -67,25 +67,29 @@
 				}
 
 				li {
-					display: grid;
-					grid-template-columns: 1em 1fr;
-					gap: 15px;
 					list-style-type: none;
 
-					i {
-						margin: auto;
-						font-size: 20px;
-					}
+					.animated {
+						display: grid;
+						grid-template-columns: 1em 1fr;
+						gap: 15px;
+						width: max-content;
 
-					span,
-					a {
-						color: inherit;
-						font-weight: bold;
-						font-size: 20px;
-						transition: color 200ms;
+						i {
+							margin: auto;
+							font-size: 20px;
+						}
 
-						&:hover {
-							color: bisque;
+						span,
+						a {
+							color: inherit;
+							font-weight: bold;
+							font-size: 20px;
+							transition: color 200ms;
+
+							&:hover {
+								color: bisque;
+							}
 						}
 					}
 				}

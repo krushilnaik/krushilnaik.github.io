@@ -8,6 +8,7 @@ import Links from '../components/Links';
 
 import './scss/ContactForm.scss';
 import '../components/scss/Input.scss';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const errorColor = 'tomato';
 
@@ -192,28 +193,41 @@ function ContactForm() {
 				<div className='contact-info'>
 					<h4>Find me on...</h4>
 
-					<img className='avatar' src='assets/images/avatar.png' alt='crucial avatar' />
+					<ScrollAnimation animateIn='fadeIn' animateOnce={true} duration={2}>
+						<img className='avatar' src='assets/images/avatar.png' alt='crucial avatar' />
+					</ScrollAnimation>
 
 					<ul>
 						<li>
-							{/* GPS icon */}
-							<i className='fas fa-map-marker-alt'></i>
-							<span>New Jersey, USA</span>
+							<ScrollAnimation animateIn='fadeInUp' animateOnce={true}>
+								{/* GPS icon */}
+								<i className='fas fa-map-marker-alt'></i>
+								<span>New Jersey, USA</span>
+							</ScrollAnimation>
 						</li>
+
 						<li>
-							{/* Email icon */}
-							<i className='fas fa-envelope'></i>
-							<a href='mailto:krushilnaik96@gmail.com'>krushilnaik96@gmail.com</a>
+							<ScrollAnimation animateIn='fadeInUp' animateOnce={true} delay={200}>
+								{/* Email icon */}
+								<i className='fas fa-envelope'></i>
+								<a href='mailto:krushilnaik96@gmail.com'>krushilnaik96@gmail.com</a>
+							</ScrollAnimation>
 						</li>
+
 						<li>
-							{/* Some other third one */}
-							<i className='fas fa-file'></i>
-							<a href='assets/docs/krushilNaikResume.docx' download>
-								Resume
-							</a>
+							<ScrollAnimation animateIn='fadeInUp' animateOnce={true} delay={400}>
+								{/* Some other third one */}
+								<i className='fas fa-file'></i>
+								<a href='assets/docs/krushilNaikResume.docx' download>
+									Resume
+								</a>
+							</ScrollAnimation>
 						</li>
 					</ul>
-					<Links />
+
+					<ScrollAnimation animateIn='fadeIn' animateOnce={true} duration={2}>
+						<Links />
+					</ScrollAnimation>
 				</div>
 
 				<h3>...or leave a message here</h3>

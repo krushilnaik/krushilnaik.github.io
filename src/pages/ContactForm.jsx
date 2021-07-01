@@ -218,7 +218,7 @@ function ContactForm() {
 							<ScrollAnimation animateIn='fadeInUp' animateOnce={true} delay={400}>
 								{/* Some other third one */}
 								<i className='fas fa-file'></i>
-								<a href='assets/docs/krushilNaikResume.docx' download>
+								<a href='assets/docs/Krushil_Naik_Resume.pdf' download>
 									Resume
 								</a>
 							</ScrollAnimation>

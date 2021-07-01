@@ -28,18 +28,13 @@ body {
 	width: 100%;
 
 	background: #c31432;
-	background: radial-gradient(
-		ellipse at top,
-		rgba(0, 128, 0, 0.931),
-		rgba(100, 148, 237, 0.933),
-		rgba(197, 58, 197, 0.937)
-	);
+	background: linear-gradient(45deg, rgba(100, 148, 237, 0.933), rgba(197, 58, 197, 0.937));
 	background-attachment: fixed;
-	background-size: 400% 400%;
-	animation: backgroundAnimation 25s infinite;
+	/* background-size: 400% 400%; */
+	/* animation: backgroundAnimation 25s infinite; */
 }
 
-@keyframes backgroundAnimation {
+/* @keyframes backgroundAnimation {
 	0% {
 		background-position: 0% 50%;
 	}
@@ -48,8 +43,8 @@ body {
 	}
 	100% {
 		background-position: 0% 50%;
-	}
-}
+	} */
+/* } */
 
 /* Customize scroll bar */
 ::-webkit-scrollbar {

@@ -19,22 +19,25 @@ html {
 body {
 	width: 100vw;
 	max-width: 100%;
-	background-image: url(../images/background.png);
+	/* background-image: url(../images/background.png); */
+	background-image: url(../images/download.png);
 	background-attachment: fixed;
-	background-size: 50% 50%;
+	/* background-size: 100%; */
+	background-position: center;
+	animation: backgroundAnimation 300ms forwards ease-in-out;
 }
 
 #root {
 	width: 100%;
 
-	background: #c31432;
-	background: linear-gradient(45deg, rgba(100, 148, 237, 0.933), rgba(197, 58, 197, 0.937));
+	/* background: #c31432; */
+	background: linear-gradient(45deg, rgba(100, 148, 237, 0.533), rgba(197, 58, 197, 0.537));
 	background-attachment: fixed;
-	/* background-size: 400% 400%; */
-	/* animation: backgroundAnimation 25s infinite; */
+	background-size: 400% 400%;
+	animation: gradientAnimation 10s infinite ease-in;
 }
 
-/* @keyframes backgroundAnimation {
+@keyframes gradientAnimation {
 	0% {
 		background-position: 0% 50%;
 	}
@@ -43,11 +46,21 @@ body {
 	}
 	100% {
 		background-position: 0% 50%;
-	} */
-/* } */
+	}
+}
 
 /* Customize scroll bar */
 ::-webkit-scrollbar {
 	display: none;
 	width: 0.5em;
+}
+
+@keyframes backgroundAnimation {
+	from {
+		background-size: 115%;
+	}
+
+	to {
+		background-size: 100%;
+	}
 }

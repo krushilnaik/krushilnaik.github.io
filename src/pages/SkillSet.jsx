@@ -1,18 +1,18 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
 import './scss/SkillSet.scss';
 import skills from '../json/skills.json';
 import { slugify } from '../utils/js/functions';
 import InView from 'react-intersection-observer';
-import { PageContext } from '../utils/js/contexts';
 import ScrollAnimation from 'react-animate-on-scroll';
 import ProjectPortal from '../components/ProjectPortal';
+import { usePage } from '../hooks/usePage';
 
 /**
  * - TODO: make skill columns scrollable to avoid crowding page
  */
 function SkillSet() {
-	const { setActivePage } = useContext(PageContext);
+	const { setActivePage } = usePage();
 
 	return (
 		<InView

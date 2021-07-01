@@ -1,11 +1,11 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import InView from 'react-intersection-observer';
-import { PageContext } from '../utils/js/contexts';
+import { usePage } from '../hooks/usePage';
 
 import './scss/Intro.scss';
 
 function Intro() {
-	const { setActivePage } = useContext(PageContext);
+	const { setActivePage } = usePage();
 
 	return (
 		<InView

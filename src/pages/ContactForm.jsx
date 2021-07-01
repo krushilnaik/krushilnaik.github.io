@@ -1,14 +1,14 @@
 import emailjs from 'emailjs-com';
 import gsap from 'gsap';
-import React, { useContext, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import InView from 'react-intersection-observer';
-import { PageContext } from '../utils/js/contexts';
 import Airplane from '../components/Airplane';
 import Links from '../components/Links';
 
 import './scss/ContactForm.scss';
 import '../components/scss/Input.scss';
 import ScrollAnimation from 'react-animate-on-scroll';
+import { usePage } from '../hooks/usePage';
 
 const errorColor = 'tomato';
 
@@ -17,7 +17,7 @@ function ContactForm() {
 	const [email, setEmail] = useState('');
 	const [message, setMessage] = useState('');
 
-	const { setActivePage } = useContext(PageContext);
+	const { setActivePage } = usePage();
 
 	/**
 	 * Reference to name field's wrapper div

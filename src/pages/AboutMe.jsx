@@ -31,8 +31,9 @@ function AboutMe() {
 				</aside>
 
 				<article>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta vitae enim voluptas
-					impedit provident. Accusamus.
+					Fast learning, tech enthusiast by-hobby looking to make it a career path. Skilled
+					beyond what experience would indicate due to a naturally curious mind. Able to solve
+					advanced problems by thinking analytically in a divide-and-conquer manner.
 				</article>
 			</div>
 		</InView>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './scss/SkillSet.scss';
+import '../scss/pages/SkillSet.scss';
 import skills from '../json/skills.json';
 import { slugify } from '../utils/js/functions';
 import InView from 'react-intersection-observer';

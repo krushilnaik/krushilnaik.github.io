@@ -1,7 +1,7 @@
 import anime from 'animejs';
 import React, { useEffect, useRef } from 'react';
 
-import './scss/JitterIcon.scss';
+import '../scss/components/JitterIcon.scss';
 
 /**
  * @param {{

@@ -2,7 +2,7 @@ import React from 'react';
 import InView from 'react-intersection-observer';
 import { usePage } from '../hooks/usePage';
 
-import './scss/AboutMe.scss';
+import '../scss/pages/AboutMe.scss';
 
 /**
  * - TODO: everything

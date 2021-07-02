@@ -1,7 +1,7 @@
 import React from 'react';
 import { PageContext } from '../utils/js/contexts';
 
-import './scss/ScrollToTop.scss';
+import '../scss/components/ScrollToTop.scss';
 
 /**
  * - TODO: bottom-center cheveron will double as ScrollToTop

@@ -1,7 +1,7 @@
 import React from 'react';
 import JitterIcon from './JitterIcon';
 
-import './scss/ProjectPortal.scss';
+import '../scss/components/ProjectPortal.scss';
 
 /**
  * - TODO: add icon jittering if there's no project using that skill on GitHub
@@ -13,7 +13,7 @@ import './scss/ProjectPortal.scss';
  */
 function ProjectPortal(props) {
 	const { demo, source, portalText } = props;
-	console.log(`making Portal for ${portalText} with ${demo}, ${source}`);
+	// console.log(`making Portal for ${portalText} with ${demo}, ${source}`);
 
 	return (
 		<div className='portal'>

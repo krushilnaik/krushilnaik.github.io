@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from 'react';
 import { PageContext } from '../utils/js/contexts';
 import { slugify } from '../utils/js/functions';
 
-import './scss/NavBar.scss';
+import '../scss/components/NavBar.scss';
 
 const links = ['Who I am', 'What I know', 'How to find me'];
 

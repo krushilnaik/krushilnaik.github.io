@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './scss/Links.scss';
+import '../scss/components/Links.scss';
 
 function Links() {
 	return (

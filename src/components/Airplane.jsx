@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './scss/Airplane.scss';
+import '../scss/components/Airplane.scss';
 
 function Airplane() {
 	return (

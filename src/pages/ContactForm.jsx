@@ -1,14 +1,14 @@
 import emailjs from 'emailjs-com';
 import gsap from 'gsap';
 import React, { useRef, useState } from 'react';
+import { usePage } from '../hooks/usePage';
 import InView from 'react-intersection-observer';
 import Airplane from '../components/Airplane';
 import Links from '../components/Links';
-
-import './scss/ContactForm.scss';
-import '../components/scss/Input.scss';
 import ScrollAnimation from 'react-animate-on-scroll';
-import { usePage } from '../hooks/usePage';
+
+import '../scss/pages/ContactForm.scss';
+import '../scss/components/Input.scss';
 
 const errorColor = 'tomato';
 

@@ -2,7 +2,7 @@ import React from 'react';
 import InView from 'react-intersection-observer';
 import { usePage } from '../hooks/usePage';
 
-import './scss/Intro.scss';
+import '../scss/pages/Intro.scss';
 
 function Intro() {
 	const { setActivePage } = usePage();

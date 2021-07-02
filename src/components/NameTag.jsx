@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './scss/NameTag.scss';
+import '../scss/components/NameTag.scss';
 
 function NameTag() {
 	return (

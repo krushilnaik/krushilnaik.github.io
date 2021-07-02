@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import './scss/Input.scss';
+import '../scss/components/Input.scss';
 
 /**
  * @param {{

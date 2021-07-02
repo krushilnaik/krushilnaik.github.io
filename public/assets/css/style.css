@@ -22,9 +22,11 @@ body {
 	/* background-image: url(../images/background.png); */
 	background-image: url(../images/download.png);
 	background-attachment: fixed;
-	/* background-size: 100%; */
+	background-size: 115%;
+	filter: brightness(150%);
 	background-position: center;
-	animation: backgroundAnimation 300ms forwards ease-in-out;
+	animation: backgroundAnimation 500ms forwards ease-out;
+	animation-delay: 50ms;
 }
 
 #root {
@@ -58,9 +60,11 @@ body {
 @keyframes backgroundAnimation {
 	from {
 		background-size: 115%;
+		filter: brightness(150%);
 	}
 
 	to {
 		background-size: 100%;
+		filter: brightness(100%);
 	}
 }

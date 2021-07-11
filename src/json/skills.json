@@ -53,11 +53,6 @@
 				"sourceCode": "https://github.com/krushilnaik/MobileFlashcards"
 			},
 			{
-				"skill": "Angular",
-				"deployedSite": "",
-				"sourceCode": ""
-			},
-			{
 				"skill": "RESTful APIs",
 				"deployedSite": "https://krushilnaik.github.io/Weather-Dashboard/",
 				"sourceCode": "https://github.com/krushilnaik/Weather-Dashboard"
@@ -108,17 +103,7 @@
 				"sourceCode": ""
 			},
 			{
-				"skill": "Gatsby",
-				"deployedSite": "",
-				"sourceCode": ""
-			},
-			{
 				"skill": "MongoDB",
-				"deployedSite": "",
-				"sourceCode": ""
-			},
-			{
-				"skill": "508 Compliance",
 				"deployedSite": "",
 				"sourceCode": ""
 			}

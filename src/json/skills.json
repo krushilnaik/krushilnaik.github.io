@@ -65,7 +65,7 @@
 			{
 				"skill": "NodeJS",
 				"deployedSite": "",
-				"sourceCode": "https://github.com/krushilnaik/README-Generator"
+				"sourceCode": "https://github.com/krushilnaik/Team-Profile-Generator"
 			},
 			{
 				"skill": "AnimeJS",
@@ -79,7 +79,7 @@
 			},
 			{
 				"skill": "SocketIO",
-				"deployedSite": "",
+				"deployedSite": "https://terminal-online.herokuapp.com/",
 				"sourceCode": "https://github.com/krushilnaik/TerminalOnline"
 			}
 		]

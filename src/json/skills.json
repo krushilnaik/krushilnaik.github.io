@@ -89,11 +89,16 @@
 		"skills": [
 			{
 				"skill": "Netlify",
-				"deployedSite": "https://acupunctureherbcenter.netlify.app/",
-				"sourceCode": "https://github.com/krushilnaik/Acupuncture-Herb-Center"
+				"deployedSite": "",
+				"sourceCode": ""
 			},
 			{
 				"skill": "Webpack",
+				"deployedSite": "",
+				"sourceCode": ""
+			},
+			{
+				"skill": "Parcel",
 				"deployedSite": "",
 				"sourceCode": ""
 			},

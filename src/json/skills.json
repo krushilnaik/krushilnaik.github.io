@@ -111,6 +111,16 @@
 				"skill": "MongoDB",
 				"deployedSite": "",
 				"sourceCode": ""
+			},
+			{
+				"skill": "WSL",
+				"deployedSite": "",
+				"sourceCode": ""
+			},
+			{
+				"skill": "Docker",
+				"deployedSite": "",
+				"sourceCode": ""
 			}
 		]
 	}

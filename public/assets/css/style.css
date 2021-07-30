@@ -13,6 +13,7 @@ html {
 	padding: 0;
 	box-sizing: border-box;
 	font-family: sans-serif;
+
 	/* border: dashed 2px red; */
 }
 
@@ -30,9 +31,7 @@ body {
 }
 
 #root {
-	width: 100%;
-
-	/* background: #c31432; */
+	background: #6494ed;
 	background: linear-gradient(45deg, rgba(100, 148, 237, 0.533), rgba(197, 58, 197, 0.537));
 	background-attachment: fixed;
 	background-size: 400% 400%;
@@ -66,5 +65,15 @@ body {
 	to {
 		background-size: 100%;
 		filter: brightness(100%);
+	}
+}
+
+@media screen and (max-width: 767px) {
+	body {
+		background-image: none;
+	}
+
+	#root {
+		background: linear-gradient(45deg, rgba(100, 148, 237), rgb(58, 197, 132));
 	}
 }

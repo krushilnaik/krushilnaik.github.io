@@ -226,3 +226,31 @@
 		width: 70%;
 	}
 }
+
+@media screen and (max-width: 767px) {
+	#how-to-find-me {
+		form {
+			grid-template-columns: 1fr;
+			grid-template-areas: 'name' 'email' 'message' 'submit';
+			gap: 5px;
+			padding: 0;
+			width: 80%;
+
+			h3 {
+				display: none;
+			}
+
+			.contact-info {
+				display: none !important;
+			}
+
+			.airplane {
+				display: none;
+			}
+
+			button[type='submit'] {
+				background: linear-gradient(45deg, crimson, coral);
+			}
+		}
+	}
+}

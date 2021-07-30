@@ -73,3 +73,9 @@ $wordCount: 4;
 		opacity: 0;
 	}
 }
+
+@media screen and (max-width: 767px) {
+	#intro {
+		display: none;
+	}
+}

@@ -40,6 +40,7 @@ $foregroud: linear-gradient(45deg, #ec7979 0%, #d16e6e 100%);
 	.header-wrapper {
 		position: sticky;
 		justify-content: center;
+		z-index: 9999999;
 		padding: 5px 0;
 		width: 100%;
 		background-color: $background;

@@ -20,8 +20,9 @@ $foregroud: linear-gradient(45deg, #ec7979 0%, #d16e6e 100%);
 		transition: all 300ms;
 	}
 
-	h1 {
+	div {
 		font-size: inherit;
+		font-weight: bold;
 
 		&::before {
 			content: 'krushilnaik';

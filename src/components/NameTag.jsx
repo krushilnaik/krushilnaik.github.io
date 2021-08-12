@@ -12,9 +12,9 @@ function NameTag() {
 				return (
 					<div className='header-wrapper'>
 						<span>&lt;</span>
-						<h1
+						<div
 							data-content={activePage !== 'Who I am' ? slugify(activePage) : 'krushilnaik'}
-						></h1>
+						></div>
 						<span style={{ marginLeft: '10px' }}>/&gt;</span>
 					</div>
 				);

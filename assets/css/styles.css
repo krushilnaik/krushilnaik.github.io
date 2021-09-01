@@ -2,53 +2,82 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: monospace;
+	color: honeydew;
+	font-family: sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 body {
-	background: rgb(236, 60, 95);
+	width: 100vw;
+	min-height: 100vh;
+	background: rgb(228, 58, 92);
+
+	display: grid;
+	text-align: center;
+}
+
+header {
+	font-family: monospace;
+	position: fixed;
+	width: 100%;
+	font-weight: bold;
+	font-size: 2.25rem;
+	padding: 0.5rem;
+}
+
+nav {
+	position: fixed;
+	left: 15px;
+	bottom: 25px;
+	text-align: start;
+	font-size: 20px;
+}
+
+li {
+	list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	transition: color 300ms;
+}
+
+a:hover {
+	color: cyan;
 }
 
 main {
-	width: 100vw;
-	height: 100vh;
-	display: grid;
+	display: flex;
+	justify-self: center;
+	flex-direction: column;
+	gap: 5px;
 	place-content: center;
-	text-align: center;
-
-	color: honeydew;
 	font-weight: bold;
 	font-size: 4vmin;
 }
 
-h1 {
-	animation: glideIn 650ms ease-in forwards;
-	opacity: 0;
+section {
+	width: 100vw;
+	height: 100vh;
+	display: grid;
 }
 
-h4 {
-	animation: fadeIn 500ms ease-in forwards;
-	animation-delay: 700ms;
-	opacity: 0;
+.wrapper {
+	padding: 30px;
+	margin-top: 3rem;
 }
 
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
+#about-me {
+	background-color: rgba(0, 0, 0, 0.15);
 }
 
-@keyframes glideIn {
-	from {
-		opacity: 0;
-		margin-top: -110px;
-	}
+#my-work {
+	background-color: rgba(0, 0, 0, 0.2);
+}
 
-	to {
-		opacity: 1;
-		margin-top: 0;
-	}
+#contact-me {
+	background-color: rgba(0, 0, 0, 0.25);
 }

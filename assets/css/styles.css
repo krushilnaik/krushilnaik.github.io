@@ -14,6 +14,7 @@ body {
 	width: 100vw;
 	min-height: 100vh;
 	background: rgb(228, 58, 92);
+	overflow-x: hidden;
 
 	display: grid;
 	text-align: center;

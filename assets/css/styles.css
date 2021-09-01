@@ -107,6 +107,7 @@ form {
 	gap: 5px;
 	margin: auto;
 	width: 50%;
+	min-width: 300px;
 	overflow: hidden;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -116,12 +117,14 @@ form {
 
 form::before {
 	content: 'Not functional (yet)';
+	color: beige;
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	font-size: 48px;
+	font-size: 50px;
 	display: -ms-grid;
 	display: grid;
+	text-shadow: 0 0 7px black;
 	place-content: center;
 	-webkit-transform: rotate(-35deg);
 	transform: rotate(-35deg);
@@ -226,21 +229,24 @@ textarea::placeholder {
 	width: fit-content;
 	background-color: crimson;
 	border: none;
-	padding: 15px;
+	padding: 10px;
 	border-radius: 7px;
 	cursor: pointer;
 }
 
-#about-me {
-	background-color: rgba(0, 0, 0, 0.15);
+::-webkit-scrollbar {
+	width: 0.5em;
 }
 
-#my-work {
-	background-color: rgba(0, 0, 0, 0.2);
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 10px #91e0ff;
+	box-shadow: inset 0 0 10px #91e0ff;
+	border-radius: 10px;
 }
 
-#contact-me {
-	background-color: rgba(0, 0, 0, 0.25);
+::-webkit-scrollbar-thumb {
+	background: dodgerblue;
+	border-radius: 15px;
 }
 
 @media screen and (min-width: 1025px) {
@@ -264,6 +270,9 @@ textarea::placeholder {
 	header {
 		font-size: 2.25rem;
 		padding: 0.5rem;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
 	}
 	header nav {
 		position: fixed;

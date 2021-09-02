@@ -38,6 +38,7 @@ header {
 	font-weight: bold;
 	font-size: 2.25rem;
 	padding: 0.5rem 1rem;
+	z-index: 99999999;
 }
 
 header ul {
@@ -88,13 +89,6 @@ section {
 	display: grid;
 }
 
-section .wrapper {
-	display: -ms-grid;
-	display: grid;
-	padding: 30px;
-	margin-top: 3rem;
-}
-
 form {
 	position: relative;
 	display: -webkit-box;
@@ -117,12 +111,13 @@ form {
 }
 
 form::before {
-	content: 'Not functional (yet)';
+	content: 'Not functional (yet)...';
 	color: beige;
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	font-size: 50px;
+	font-size: 45px;
+	bottom: 40px;
 	display: -ms-grid;
 	display: grid;
 	text-shadow: 0 0 7px black;
@@ -182,7 +177,7 @@ form ul li:hover img {
 }
 
 form ul::after {
-	content: '← but these social links are!';
+	content: '← ...but these social links are!';
 	font-size: 13px;
 }
 
@@ -242,30 +237,36 @@ textarea::placeholder {
 	cursor: pointer;
 }
 
-#my-work .wrapper {
+.wrapper {
+	position: relative;
 	display: -ms-grid;
 	display: grid;
-	-ms-grid-columns: 10em 2px 1fr;
-	grid-template-columns: 10em 2px 1fr;
-	gap: 10px;
+	-ms-grid-columns: 10em 1fr;
+	grid-template-columns: 10em 1fr;
+	gap: 1em;
 	width: 90%;
 	height: 90%;
+	padding: 30px;
 	margin: auto;
 }
 
-#my-work .wrapper h2 {
+.wrapper > h2 {
+	margin-top: 0.4em;
 	-ms-grid-column-align: end;
 	justify-self: end;
 }
 
-#my-work .wrapper .divider {
-	width: 100%;
-	height: 100%;
-	display: inline-block;
+.wrapper::before {
+	position: absolute;
+	content: '';
+	height: 90%;
+	width: 2px;
+	left: 11.5em;
+	top: 5%;
 	background-color: honeydew;
 }
 
-#my-work .wrapper .my-projects {
+.my-projects {
 	width: 100%;
 	height: 100%;
 	margin: auto;
@@ -281,9 +282,11 @@ textarea::placeholder {
 	gap: 2%;
 }
 
-#my-work .wrapper .my-projects .project {
+.my-projects .project {
+	position: relative;
 	height: 25%;
 	width: 49%;
+	text-decoration: none;
 	background-color: coral;
 	display: -ms-grid;
 	display: grid;
@@ -293,18 +296,58 @@ textarea::placeholder {
 	transition: background-color 300ms, border-color 300ms;
 }
 
-#my-work .wrapper .my-projects .project:hover {
-	background-color: lightcoral;
-	border-color: #b7dbff;
+.my-projects .project::before {
+	content: attr(data-label);
+	font-size: 20px;
+	background-color: #c53500;
+	padding: 15px 5px;
+	padding-right: 35px;
+	position: absolute;
+	-webkit-clip-path: polygon(0 0, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
+	clip-path: polygon(0 0, 100% 0%, calc(100% - 35px) 100%, 0% 100%);
+	bottom: 1em;
 }
 
-#my-work .wrapper .my-projects .project:first-child {
+.my-projects .project:hover {
+	background-color: lightcoral;
+	border-color: #6bb6ff;
+}
+
+.my-projects .project:hover::before {
+	background-color: #6bb6ff;
+}
+
+.my-projects .project:first-child {
 	width: 100%;
 	height: 45%;
 }
 
+.bio {
+	position: relative;
+	display: -ms-grid;
+	display: grid;
+	place-content: center;
+}
+
+.bio::before {
+	position: absolute;
+	content: 'draws blank for 2-3 business days...';
+	background-color: #e43a5c;
+	display: -ms-grid;
+	display: grid;
+	place-content: center;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	-webkit-animation: disappear 5ms forwards;
+	animation: disappear 5ms forwards;
+	-webkit-animation-delay: 1s;
+	animation-delay: 1s;
+}
+
 ::-webkit-scrollbar {
-	width: 0.55em;
+	width: 0.5em;
 }
 
 ::-webkit-scrollbar-track {
@@ -314,8 +357,28 @@ textarea::placeholder {
 }
 
 ::-webkit-scrollbar-thumb {
-	background: dodgerblue;
+	background: #51a9ff;
 	border-radius: 15px;
+}
+
+@-webkit-keyframes disappear {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+		z-index: -1;
+	}
+}
+
+@keyframes disappear {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+		z-index: -1;
+	}
 }
 
 @media screen and (min-width: 1025px) {

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
 	margin: 0;
 	padding: 0;
@@ -62,7 +63,7 @@ li a {
 }
 
 li a:hover {
-	color: cyan;
+	color: #ffa483;
 }
 
 main {
@@ -128,7 +129,7 @@ form::before {
 	place-content: center;
 	-webkit-transform: rotate(-35deg);
 	transform: rotate(-35deg);
-	z-index: 999999999;
+	z-index: 999;
 }
 
 form::after {
@@ -150,6 +151,8 @@ form div {
 }
 
 form ul {
+	position: relative;
+	z-index: 99999;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -176,6 +179,11 @@ form ul li img {
 form ul li:hover img {
 	-webkit-filter: invert(1);
 	filter: invert(1);
+}
+
+form ul::after {
+	content: '← but these social links are!';
+	font-size: 13px;
 }
 
 input,
@@ -234,8 +242,60 @@ textarea::placeholder {
 	cursor: pointer;
 }
 
+#my-work .wrapper {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 10em 1fr;
+	grid-template-columns: 10em 1fr;
+	width: 90%;
+	height: 90%;
+	margin: auto;
+}
+
+#my-work .wrapper h2 {
+	margin-top: 15px;
+}
+
+#my-work .wrapper .my-projects {
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	gap: 2%;
+}
+
+#my-work .wrapper .my-projects .project {
+	height: 25%;
+	width: 49%;
+	background-color: coral;
+	display: -ms-grid;
+	display: grid;
+	place-content: center;
+	border: solid 5px #c53500;
+	-webkit-transition: background-color 300ms, border-color 300ms;
+	transition: background-color 300ms, border-color 300ms;
+}
+
+#my-work .wrapper .my-projects .project:hover {
+	background-color: lightcoral;
+	border-color: #b7dbff;
+}
+
+#my-work .wrapper .my-projects .project:first-child {
+	width: 100%;
+	height: 45%;
+}
+
 ::-webkit-scrollbar {
-	width: 0.5em;
+	width: 0.55em;
 }
 
 ::-webkit-scrollbar-track {

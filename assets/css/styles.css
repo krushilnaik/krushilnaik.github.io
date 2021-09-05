@@ -293,6 +293,8 @@ textarea::placeholder {
   transition: background-color 300ms, border-color 300ms;
   width: 49%;
   background-color: coral;
+  text-decoration: none;
+  font-size: 36px;
 }
 
 .my-projects .project:hover {
@@ -381,10 +383,10 @@ textarea::placeholder {
 }
 
 @media screen and (min-width: 1025px) {
-  header nav ul li:not(:last-child) {
+  nav ul li:not(:last-child) {
     position: relative;
   }
-  header nav ul li:not(:last-child)::after {
+  nav ul li:not(:last-child)::after {
     position: absolute;
     content: "";
     height: 90%;
@@ -414,7 +416,6 @@ textarea::placeholder {
     position: relative;
     height: 25%;
     width: 49%;
-    text-decoration: none;
   }
   .my-projects .project::before,
   .my-projects .project::after {
@@ -448,6 +449,7 @@ textarea::placeholder {
     display: none;
   }
   .bio {
+    height: 100%;
     font-size: 24px;
     line-height: 1.5em;
   }

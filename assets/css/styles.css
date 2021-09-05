@@ -14,6 +14,7 @@ html {
 
 body {
 	width: 100vw;
+	max-width: 100%;
 	min-height: 100vh;
 	background: #e43a5c;
 	overflow-x: hidden;
@@ -146,7 +147,7 @@ form .buttons {
 	gap: 10px;
 }
 
-form ul {
+form .buttons ul {
 	position: relative;
 	z-index: 99999;
 	display: -webkit-box;
@@ -163,7 +164,7 @@ form ul {
 	font-size: 24px;
 }
 
-form ul li img {
+form .buttons ul li img {
 	-webkit-transition: -webkit-filter 300ms;
 	transition: -webkit-filter 300ms;
 	transition: filter 300ms;
@@ -172,12 +173,12 @@ form ul li img {
 	filter: invert(0);
 }
 
-form ul li:hover img {
+form .buttons ul li:hover img {
 	-webkit-filter: invert(1);
 	filter: invert(1);
 }
 
-form ul::after {
+form .buttons ul::after {
 	content: '← ...but these social links are!';
 	font-size: 16px;
 }
@@ -284,8 +285,23 @@ textarea::placeholder {
 
 .my-projects .project {
 	position: relative;
-	background-color: #91e0ff;
+	display: -ms-grid;
+	display: grid;
+	place-content: center;
+	border: solid 5px #c53500;
+	-webkit-transition: background-color 300ms, border-color 300ms;
+	transition: background-color 300ms, border-color 300ms;
 	width: 49%;
+	background-color: coral;
+}
+
+.my-projects .project:hover {
+	background-color: lightcoral;
+	border-color: #6bb6ff;
+}
+
+.my-projects .project:hover::before {
+	background-color: #6bb6ff;
 }
 
 .my-projects .project::before {
@@ -395,23 +411,9 @@ textarea::placeholder {
 		height: 25%;
 		width: 49%;
 		text-decoration: none;
-		background-color: coral;
-		display: -ms-grid;
-		display: grid;
-		place-content: center;
-		border: solid 5px #c53500;
-		-webkit-transition: background-color 300ms, border-color 300ms;
-		transition: background-color 300ms, border-color 300ms;
 	}
 	.my-projects .project::before {
 		font-size: 20px;
-	}
-	.my-projects .project:hover {
-		background-color: lightcoral;
-		border-color: #6bb6ff;
-	}
-	.my-projects .project:hover::before {
-		background-color: #6bb6ff;
 	}
 	.my-projects .project:first-child {
 		width: 100%;

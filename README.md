@@ -12,6 +12,8 @@
 	</a>
 </div>
 
+![Site screen recording](./screens/portfolio.desktop.gif)
+
 ---
 
 <h3 align="center">

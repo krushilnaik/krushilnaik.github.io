@@ -324,27 +324,72 @@ textarea::placeholder {
 }
 
 .bio {
-  position: relative;
   display: -ms-grid;
   display: grid;
-  place-content: center;
+  -ms-grid-columns: 1fr 3fr;
+  grid-template-columns: 1fr 3fr;
+  -ms-grid-row-align: center;
+  align-self: center;
+  gap: 15px;
 }
 
-.bio::before {
+.bio aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.bio aside img {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  -webkit-box-shadow: 1px 1px 5px black;
+  box-shadow: 1px 1px 5px black;
+}
+
+.bio aside p {
+  font-size: 36px;
+  color: lightblue;
+}
+
+.bio aside .name {
+  color: rgba(173, 216, 230, 0.5);
+  -webkit-filter: drop-shadow(0 0 4px #444444d7);
+  filter: drop-shadow(0 0 4px #444444d7);
+}
+
+.bio aside .name .note {
+  position: relative;
+  font-size: 20px;
+  padding-left: 50px;
+  top: -10px;
+}
+
+.bio aside .name .note::before {
+  content: "";
   position: absolute;
-  content: "draws blank for 2-3 business days...";
-  background-color: #e43a5c;
+  height: 15px;
+  width: 17px;
+  left: 20px;
+  top: -5px;
+  border-bottom: solid 2px lightcyan;
+  border-left: solid 2px lightcyan;
+}
+
+.bio article {
   display: -ms-grid;
   display: grid;
   place-content: center;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  -webkit-animation: disappear 5ms forwards;
-  animation: disappear 5ms forwards;
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
+  color: #fcbebe;
+  text-shadow: 0 0 5px darkslateblue;
+  font-size: 35px;
 }
 
 ::-webkit-scrollbar {
@@ -450,8 +495,6 @@ textarea::placeholder {
   }
   .bio {
     height: 100%;
-    font-size: 24px;
-    line-height: 1.5em;
   }
   .project::before {
     font-size: 20px;

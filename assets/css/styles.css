@@ -461,6 +461,8 @@ textarea::placeholder {
     position: relative;
     height: 25%;
     width: 49%;
+    display: -ms-grid;
+    display: grid;
   }
   .my-projects .project::before,
   .my-projects .project::after {
@@ -479,6 +481,9 @@ textarea::placeholder {
   .my-projects .project:first-child {
     width: 100%;
     height: 45%;
+  }
+  .my-projects .project:not(:first-child) img {
+    width: 250px;
   }
 }
 

@@ -20,6 +20,25 @@
           )
         );
     </script>
+    <script>
+      var clientApplication;
+      (function () {
+        var msalConfig = {
+          auth: {
+            clientId: "b6234054-c32f-4baa-adae-622a73ee8fd2",
+            authority:
+              "https://login.microsoftonline.com/513294a0-3e20-41b2-a970-6d30bf1546fa",
+          },
+          cache: {
+            cacheLocation: "localStorage",
+            storeAuthStateInCookie: false,
+          },
+        };
+        if (!clientApplication) {
+          clientApplication = new Msal.UserAgentApplication(msalConfig);
+        }
+      })();
+    </script>
 
     <style>
       html,
@@ -101,7 +120,7 @@
       }
     </style>
   </head>
-  <body>
+  <body onload="onSignInClick()">
     <div id="chatwindow">
       <div id="heading">
         <div><span>SSO Test Bot</span></div>
@@ -126,7 +145,6 @@
       </div>
       <div id="webchat"></div>
     </div>
-
     <script>
       function onSignin(idToken) {
         let user = clientApplication.getAccount();
@@ -135,6 +153,7 @@
         let requestObj1 = {
           scopes: ["user.read", "openid", "profile"],
         };
+        reload();
       }
 
       function onSignInClick() {
@@ -201,29 +220,11 @@
     </script>
 
     <script>
-      var clientApplication;
-      (function () {
-        var msalConfig = {
-          auth: {
-            clientId: "b6234054-c32f-4baa-adae-622a73ee8fd2",
-            authority:
-              "https://login.microsoftonline.com/513294a0-3e20-41b2-a970-6d30bf1546fa",
-          },
-          cache: {
-            cacheLocation: "localStorage",
-            storeAuthStateInCookie: false,
-          },
-        };
-        if (!clientApplication) {
-          clientApplication = new Msal.UserAgentApplication(msalConfig);
-        }
-      })();
-
       (async function main() {
         // Add your BOT ID below
         var theURL =
           "https://3553368c3d97e88cb0b080d2bcbdb9.06.environment.api.powerplatform.com/powervirtualagents/botsbyschema/cr0b0_cafTest/directline/token?api-version=2022-03-01-preview"; // you can find the token URL via the mobile app channel configuration
-
+        var userdetails = clientApplication.getAccount();
         var userId =
           clientApplication.account?.accountIdentifier != null
             ? (
@@ -241,7 +242,7 @@
               payload: {
                 name: "startConversation",
                 type: "event",
-                value: { text: "hello" },
+                value: { text: userdetails.name },
               },
             });
             return next(action);

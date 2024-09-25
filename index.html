@@ -221,6 +221,10 @@
 
     <script>
       (async function main() {
+        if (clientApplication.getAccount() == null) {
+           await clientApplication.loginPopup(requestObj).then(onSignin).catch(function (error) {console.log(error) });
+        }
+        
         // Add your BOT ID below
         var theURL =
           "https://default0cb87174c7ed4063a036cc8a3c4ee9.38.environment.api.powerplatform.com/powervirtualagents/botsbyschema/cr756_ssoBot/directline/token?api-version=2022-03-01-preview"; // you can find the token URL via the mobile app channel configuration

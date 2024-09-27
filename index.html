@@ -222,6 +222,7 @@
     <script>
       (async function main() {
         if (clientApplication.getAccount() == null) {
+           console.log(requestObj);
            await clientApplication.loginPopup(requestObj).then(onSignin).catch(function (error) {console.log(error) });
         }
         
